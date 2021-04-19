@@ -27,3 +27,14 @@ export const ImageSmall = styled.div`
   background-repeat: no-repeat;
   filter: brightness(60%);
 `;
+
+export const Title = styled.h1`
+  font-size: 150px;
+  position: fixed;
+  top: 30%;
+  margin-left: 70px;
+  color: whitesmoke;
+  text-shadow: 1px 0px 15px #111;
+  letter-spacing: 5px;
+  line-height: 1.1;
+`;
