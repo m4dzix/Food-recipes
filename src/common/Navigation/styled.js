@@ -33,8 +33,8 @@ export const Link = styled.a`
     margin-top: 5px;
     right: 0;
     background: whitesmoke;
-    transition: width 0.2s ease;
-    -webkit-transition: width 0.2s ease;
+    transition: width 0.5s ease;
+    -webkit-transition: width 0.5s ease;
   }
   &:hover:after {
     width: 100%;
