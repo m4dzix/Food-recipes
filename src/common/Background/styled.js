@@ -21,7 +21,7 @@ export const Image = styled.div`
   ${(props) =>
     props.imageSmall &&
     css`
-      height: 100vh;
+      border-left: 5px solid whitesmoke;
     `}
 `;
 

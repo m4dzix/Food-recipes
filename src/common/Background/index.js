@@ -9,7 +9,7 @@ const Background = () => {
   return (
     <StyledBackground>
       <Image backgroundImage={foodImages[counter]}></Image>
-      <Image ImageSmall backgroundImage={landscapeImages[counter]}></Image>
+      <Image imageSmall backgroundImage={landscapeImages[counter]}></Image>
       <Title>
         Eat & <br />
         Enjoy the food
