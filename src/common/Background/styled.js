@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledBackground = styled.div`
   width: 100%;
@@ -10,23 +10,19 @@ export const StyledBackground = styled.div`
   top: 0;
   right: 0;
 `;
-export const ImageBig = styled.div`
+export const Image = styled.div`
   height: 100vh;
-  transition: 1s;
+  transition: 1s ease;
   background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   filter: brightness(60%);
-`;
-export const ImageSmall = styled.div`
-  height: 100vh;
-  transition: 1s;
-  background-image: url(${(props) => props.backgroundImage});
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-left: 5px solid whitesmoke;
-  filter: brightness(60%); ;
+  ${(props) =>
+    props.imageSmall &&
+    css`
+      height: 100vh;
+    `}
 `;
 
 export const Title = styled.h1`

@@ -1,6 +1,6 @@
 import React from "react";
 import { useCounter } from "./useCounter";
-import { StyledBackground, ImageBig, ImageSmall, Title } from "./styled";
+import { StyledBackground, Image, Title } from "./styled";
 import { landscapeImages, foodImages } from "./backgrundImagesArray";
 
 const Background = () => {
@@ -8,8 +8,8 @@ const Background = () => {
 
   return (
     <StyledBackground>
-      <ImageBig backgroundImage={foodImages[counter]}></ImageBig>
-      <ImageSmall backgroundImage={landscapeImages[counter]}></ImageSmall>
+      <Image backgroundImage={foodImages[counter]}></Image>
+      <Image ImageSmall backgroundImage={landscapeImages[counter]}></Image>
       <Title>
         Eat & <br />
         Enjoy the food
