@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import italyLandscape from "../../assets/italyLandscape.jpg";
-import italyFood from "../../assets/italyFood.jpg";
 
 export const StyledBackground = styled.div`
   width: 100%;
@@ -14,18 +12,21 @@ export const StyledBackground = styled.div`
 `;
 export const ImageBig = styled.div`
   height: 100vh;
-  background-image: url(${italyFood});
+  transition: 1s;
+  background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(60%);
 `;
 export const ImageSmall = styled.div`
   height: 100vh;
-  background-image: url(${italyLandscape});
+  transition: 1s;
+  background-image: url(${(props) => props.backgroundImage});
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: brightness(60%);
+  border-left: 5px solid whitesmoke;
+  filter: brightness(60%); ;
 `;
 
 export const Title = styled.h1`
