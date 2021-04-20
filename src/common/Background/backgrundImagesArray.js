@@ -7,10 +7,10 @@ import mexicoLandscape from "../../assets/mexicoLandscape.jpg";
 import asiaFood from "../../assets/asiaFood.jpg";
 import asiaLandscape from "../../assets/asiaLandscape.jpg";
 
-export const foodImages = [greekFood, italyFood, mexicoFood, asiaFood];
+export const foodImages = [greekFood, mexicoFood, asiaFood, italyFood];
 export const landscapeImages = [
   greekLandscape,
-  italyLandscape,
   mexicoLandscape,
   asiaLandscape,
+  italyLandscape,
 ];
