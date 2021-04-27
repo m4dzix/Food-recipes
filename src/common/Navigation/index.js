@@ -1,24 +1,30 @@
 import React from "react";
 import LogoIMG from "../../assets/logo.png";
-import { Nav, List, Link, Logo } from "./styled";
-const Navigation = () => (
-  <Nav>
-    <Logo src={LogoIMG}></Logo>
-    <List>
-      <li>
-        <Link>Itaian</Link>
-      </li>
-      <li>
-        <Link>Mexico</Link>
-      </li>
-      <li>
-        <Link>Asia</Link>
-      </li>
-      <li>
-        <Link>Chinese</Link>
-      </li>
-    </List>
-  </Nav>
-);
+import ListOfAreas from "./listOfAreas";
+import { Nav, Item, Link, Logo } from "./styled";
+import { useAreaRecipes } from "../../fetchFromAPI";
+
+const Navigation = () => {
+  const areas = useAreaRecipes().meals;
+
+  return (
+    <Nav>
+      <Logo src={LogoIMG}></Logo>
+      <ListOfAreas
+        body={
+          !!areas
+            ? areas.map((area) => {
+                return (
+                  <Item key={area.strCategory}>
+                    <Link>{area.strCategory}</Link>
+                  </Item>
+                );
+              })
+            : false
+        }
+      ></ListOfAreas>
+    </Nav>
+  );
+};
 
 export default Navigation;

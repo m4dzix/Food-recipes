@@ -11,12 +11,7 @@ export const Logo = styled.img`
   width: 8%;
   height: 6%;
 `;
-export const List = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-`;
-export const Link = styled.a`
+export const Item = styled.li`
   position: relative;
   color: black;
   font-weight: 200;
@@ -41,4 +36,7 @@ export const Link = styled.a`
     left: 0;
     background: whitesmoke;
   }
+`;
+export const Link = styled.a`
+  text-decoration: none;
 `;
