@@ -4,7 +4,7 @@ const areasSlice = createSlice({
   name: "areas",
   initialState: {
     status: "initial",
-    hideMenuList: true,
+    hideMenuList: false,
   },
   reducers: {
     toggleHideMenuList: (state) => {
@@ -15,7 +15,7 @@ const areasSlice = createSlice({
     }),
     fetchAreasSuccess: (state, { payload: areas }) => {
       state.status = "success";
-      state.areas = areas;
+      state.meals = areas;
     },
     fetchAreasError: () => ({
       status: "error",
@@ -30,8 +30,10 @@ export const {
   fetchAreasError,
 } = areasSlice.actions;
 
-export const selectAreas = (state) => state.areas;
-export const selectHideMenuList = (state) => selectAreas(state).hideMenuList;
-export const selectAreasStatus = (state) => selectAreas(state).status;
+export const selectAreasState = (state) => state.areas;
+export const selectAreas = (state) => selectAreasState(state).meals;
+export const selectHideMenuList = (state) =>
+  selectAreasState(state).hideMenuList;
+export const selectAreasStatus = (state) => selectAreasState(state).status;
 
 export default areasSlice.reducer;

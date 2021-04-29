@@ -1,18 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectHideMenuList, toggleHideMenuList } from "./areasSlice";
-import { MenuList, BurgerMenuIcon } from "./styled";
+import {
+  selectHideMenuList,
+  toggleHideMenuList,
+  fetchAreas,
+  selectAreas,
+  selectAreasStatus,
+} from "./areasSlice";
+import { MenuList, BurgerMenuIcon, List, Item, Link } from "./styled";
 
 const Navigation = () => {
   const dispatch = useDispatch();
   const isHideMenuList = useSelector(selectHideMenuList);
+  const areas = useSelector(selectAreas);
+  const areasState = useSelector(selectAreasStatus);
+
+  useEffect(() => {
+    dispatch(fetchAreas());
+  }, [dispatch]);
 
   return (
     <>
       <BurgerMenuIcon
-        onClick={() => dispatch(toggleHideMenuList())}
+        onClick={() => {
+          dispatch(toggleHideMenuList());
+        }}
       ></BurgerMenuIcon>
-      <MenuList hideMenuList={!isHideMenuList}></MenuList>
+      <MenuList hideMenuList={isHideMenuList}>
+        {areasState === "success" ? (
+          <List>
+            {areas.map((area) => (
+              <Item key={area.strArea}>
+                <Link>{area.strArea}</Link>
+              </Item>
+            ))}
+          </List>
+        ) : (
+          <div></div>
+        )}
+      </MenuList>
     </>
   );
 };
