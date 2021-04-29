@@ -1,11 +1,19 @@
 import React from "react";
-import { Nav, Burger } from "./styled";
+import { useSelector, useDispatch } from "react-redux";
+import { selectHideMenuList, toggleHideMenuList } from "./areasSlice";
+import { MenuList, BurgerMenuIcon } from "./styled";
 
 const Navigation = () => {
+  const dispatch = useDispatch();
+  const isHideMenuList = useSelector(selectHideMenuList);
+
   return (
-    <Nav>
-      <Burger />
-    </Nav>
+    <>
+      <BurgerMenuIcon
+        onClick={() => dispatch(toggleHideMenuList())}
+      ></BurgerMenuIcon>
+      <MenuList hideMenuList={!isHideMenuList}></MenuList>
+    </>
   );
 };
 
