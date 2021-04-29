@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular";
 
-export const MenuList = styled.nav`
+export const MenuList = styled.section`
   width: 30vw;
   height: 100vh;
   background-color: #aaa;
@@ -16,6 +16,24 @@ export const MenuList = styled.nav`
     css`
       right: 0px;
     `}
+  @media (max-width: 823px) and (orientation: landscape) {
+    width: 100vw;
+    right: -100vw;
+    ${({ hideMenuList }) =>
+      hideMenuList &&
+      css`
+        right: 0px;
+      `}
+  }
+  @media (max-width: 420px) {
+    width: 100vw;
+    right: -100vw;
+    ${({ hideMenuList }) =>
+      hideMenuList &&
+      css`
+        right: 0px;
+      `}
+  }
 `;
 export const BurgerMenuIcon = styled(Menu)`
   position: fixed;
@@ -26,12 +44,18 @@ export const BurgerMenuIcon = styled(Menu)`
   box-shadow: 0px 3px 10px #111;
   height: 80px;
   cursor: pointer;
+  @media (max-width: 823px) and (orientation: landscape) {
+    height: 50px;
+  }
 `;
 export const List = styled.ul`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 40px;
   list-style: none;
+  @media (max-width: 823px) and (orientation: landscape) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const Item = styled.li`
@@ -45,6 +69,9 @@ export const Item = styled.li`
 
   &:hover {
     font-weight: bold;
+  }
+  @media (max-width: 823px) and (orientation: landscape) {
+    font-size: 25px;
   }
 `;
 export const Link = styled.a`

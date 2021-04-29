@@ -8,5 +8,16 @@ export const StyledTopBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  @media (max-width: 420px) {
+    padding: 0px;
+  }
 `;
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  @media (max-width: 823px) and (orientation: landscape) {
+    width: 200px;
+  }
+  @media (max-width: 420px) {
+    width: 200px;
+    padding: 5px;
+  }
+`;
