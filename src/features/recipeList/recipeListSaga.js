@@ -6,9 +6,9 @@ import {
 } from "./recipeListSlice";
 import { getRecipeList } from "./recipeListApi";
 
-function* fetchRecipeListHandler() {
+function* fetchRecipeListHandler({ payload: area }) {
   try {
-    const recipeList = yield call(getRecipeList);
+    const recipeList = yield call(getRecipeList, area);
     yield put(fetchRecipeListSuccess(recipeList));
   } catch (error) {
     yield put(fetchRecipeListError);
