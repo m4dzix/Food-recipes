@@ -9,4 +9,10 @@ export const StyledSection = styled.section`
   justify-content: center;
   background-color: pink;
   padding: 50px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  }
+  @media (max-width: 400px) {
+    padding: 30px;
+  }
 `;

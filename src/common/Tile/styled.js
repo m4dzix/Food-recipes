@@ -6,7 +6,10 @@ export const Wrapper = styled.article`
   background-color: whitesmoke;
   display: grid;
   grid-gap: 16px;
-  grid-template-rows: 434px auto;
+  grid-template-rows: 334px auto;
+  @media (max-width: 812px) and (orientation: landscape) {
+    grid-template-rows: 234px auto;
+  }
 `;
 export const Image = styled.div`
   border-radius: 5px;
@@ -16,4 +19,7 @@ export const Title = styled.header`
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+  @media (max-width: 812px) and (orientation: landscape) {
+    font-size: 30px;
+  }
 `;
