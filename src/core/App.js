@@ -1,18 +1,22 @@
 import React from "react";
-import { Main } from "../common/Main/index.js";
+import { toRecipeList } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
+
 import RecipeList from "../features/recipeList/index";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <HashRouter>
       <Background />
-      <Main>
-        <TopBar />
-        <RecipeList />
-      </Main>
-    </>
+      <TopBar />
+      <Switch>
+        <Route path={toRecipeList()}>
+          <RecipeList />
+        </Route>
+      </Switch>
+    </HashRouter>
   );
 }
 
