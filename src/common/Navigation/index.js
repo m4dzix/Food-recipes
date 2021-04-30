@@ -7,7 +7,8 @@ import {
   selectAreas,
   selectAreasStatus,
 } from "./areasSlice";
-import { MenuList, BurgerMenuIcon, List, Item, Link } from "./styled";
+import { MenuList, BurgerMenuIcon, List, Item, StyledLink } from "./styled";
+import { toRecipeList } from "../../routes";
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -30,9 +31,13 @@ const Navigation = () => {
         {areasState === "success" ? (
           <List>
             {areas.map((area) => (
-              <Item key={area.strArea}>
-                <Link>{area.strArea}</Link>
-              </Item>
+              <StyledLink
+                key={area.strArea}
+                href=""
+                to={toRecipeList({ id: area.strArea })}
+              >
+                <Item>{area.strArea}</Item>
+              </StyledLink>
             ))}
           </List>
         ) : (

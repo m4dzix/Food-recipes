@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular";
+import { Link } from "react-router-dom";
 
 export const MenuList = styled.section`
   width: 30vw;
   height: 100vh;
   background-color: whitesmoke;
   opacity: 0.7;
-
   position: fixed;
   z-index: 1;
   right: -30vw;
@@ -77,6 +77,6 @@ export const Item = styled.li`
     font-size: 25px;
   }
 `;
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
