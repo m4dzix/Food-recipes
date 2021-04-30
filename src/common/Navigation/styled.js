@@ -6,7 +6,7 @@ export const MenuList = styled.section`
   width: 30vw;
   height: 100vh;
   background-color: whitesmoke;
-  opacity: 0.7;
+  filter: sepia(100%);
   position: fixed;
   z-index: 1;
   right: -30vw;

@@ -7,7 +7,7 @@ export const StyledTopBar = styled.nav`
   margin: 0;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
+  background-color: #eee8;
   @media (max-width: 420px) {
     padding: 0px;
   }
