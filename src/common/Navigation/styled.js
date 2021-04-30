@@ -4,7 +4,9 @@ import { Menu } from "@styled-icons/boxicons-regular";
 export const MenuList = styled.section`
   width: 30vw;
   height: 100vh;
-  background-color: #aaa;
+  background-color: whitesmoke;
+  opacity: 0.7;
+
   position: fixed;
   z-index: 1;
   right: -30vw;
@@ -63,9 +65,10 @@ export const Item = styled.li`
   font-weight: 200;
   margin-top: 20px;
   font-size: 40px;
-  color: whitesmoke;
-  text-shadow: 1px 0px 15px #111;
+  color: black;
+  font-weight: 500;
   transition: 0.5s ease;
+  opacity: 1;
 
   &:hover {
     font-weight: bold;
