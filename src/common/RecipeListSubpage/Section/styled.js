@@ -7,8 +7,8 @@ export const StyledSection = styled.section`
   grid-gap: 24px;
   align-items: center;
   justify-content: center;
-  background-color: pink;
   padding: 50px;
+  background-color: #1118;
   @media (max-width: 768px) {
     grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
   }
