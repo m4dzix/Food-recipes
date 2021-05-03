@@ -40,8 +40,9 @@ export const List = styled.ul`
   font-size: 40px;
   font-weight: bold;
   list-style: none;
-  ${({ ingridiens }) =>
-    ingridiens &&
+  text-transform: capitalize;
+  ${({ ingredients }) =>
+    ingredients &&
     css`
       font-size: 20px;
       font-weight: normal;

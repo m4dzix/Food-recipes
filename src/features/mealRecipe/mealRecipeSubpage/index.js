@@ -6,11 +6,16 @@ import {
   selectMealRecipeStatus,
   fetchMealRecipe,
 } from "../mealRecipeSlice";
+import {
+  useSelectElements,
+  useShowElementsWithValue,
+} from "./useSelectElement";
 
 const MealRecipeSubpage = () => {
   const mealRecipe = useSelector(selectMealRecipe);
   const mealRecipeStatus = useSelector(selectMealRecipeStatus);
-
+  const selectElements = useSelectElements();
+  const elementsWithValue = useShowElementsWithValue();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,6 +23,10 @@ const MealRecipeSubpage = () => {
   }, [dispatch]);
 
   if (mealRecipeStatus === "success") {
+    const ingredients = elementsWithValue(
+      selectElements(mealRecipe, "strIngredient")
+    );
+    console.log(ingredients);
     return (
       <Section>
         <Wrapper>
@@ -30,12 +39,10 @@ const MealRecipeSubpage = () => {
               <a href={mealRecipe.strYoutube}>YOUTUBE</a>
             </Item>
           </List>
-          <List ingridiens>
-            <Item>{mealRecipe.strIngredient1}</Item>
-            <Item>{mealRecipe.strIngredient1}</Item>
-            <Item>{mealRecipe.strIngredient1}</Item>
-            <Item>{mealRecipe.strIngredient1}</Item>
-            <Item>{mealRecipe.strIngredient1}</Item>
+          <List ingredients>
+            {ingredients.map((ingredient) => (
+              <Item key={ingredient}>{ingredient[1]}</Item>
+            ))}
           </List>
           <Recipe>{mealRecipe.strInstructions}</Recipe>
         </Wrapper>
