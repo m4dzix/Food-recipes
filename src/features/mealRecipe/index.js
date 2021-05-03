@@ -1,23 +1,6 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  selectMealRecipe,
-  selectMealRecipeStatus,
-  fetchMealRecipe,
-} from "./mealRecipeSlice";
-import Section from "../../common/RecipeListSubpage/Section";
+import React from "react";
+import MealRecipeSubpage from "./mealRecipeSubpage/index";
 
-const MealRecipe = () => {
-  const mealRecipe = useSelector(selectMealRecipe);
-  const mealRecipeStatus = useSelector(selectMealRecipeStatus);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchMealRecipe());
-  }, [dispatch]);
-
-  return <Section></Section>;
-};
+const MealRecipe = () => <MealRecipeSubpage />;
 
 export default MealRecipe;
