@@ -1,1 +1,1 @@
-export const toRecipeList = ({ id } = { id: ":id" }) => `/recipe-list/${id}`;
+export const toRecipeList = (id) => `/recipe-list/${id}`;

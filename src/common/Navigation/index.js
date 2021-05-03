@@ -34,7 +34,7 @@ const Navigation = () => {
               <StyledLink
                 key={area.strArea}
                 href=""
-                to={toRecipeList({ id: area.strArea })}
+                to={toRecipeList(area.strArea)}
               >
                 <Item>{area.strArea}</Item>
               </StyledLink>

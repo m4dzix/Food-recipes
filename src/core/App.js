@@ -2,7 +2,6 @@ import React from "react";
 import { toRecipeList } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
-
 import RecipeList from "../features/recipeList/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
 
@@ -12,7 +11,7 @@ function App() {
       <Background />
       <TopBar />
       <Switch>
-        <Route path={toRecipeList()}>
+        <Route path={toRecipeList(":id")}>
           <RecipeList />
         </Route>
       </Switch>
