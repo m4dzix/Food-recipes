@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from "redux-saga/effects";
-import { getAreas } from "./fetchFromAPI";
+import { getAreas } from "./areasListApi";
 import { fetchAreas, fetchAreasError, fetchAreasSuccess } from "./areasSlice";
 
 function* fetchAreasHandler() {
