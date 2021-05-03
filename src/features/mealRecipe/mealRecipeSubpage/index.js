@@ -21,23 +21,23 @@ const MealRecipeSubpage = () => {
     return (
       <Section>
         <Wrapper>
-          <Title>{mealRecipe[0].strMeal}</Title>
-          <Image url={mealRecipe[0].strMealThumb} />
+          <Title>{mealRecipe.strMeal}</Title>
+          <Image url={mealRecipe.strMealThumb} />
           <List>
-            <Item>{mealRecipe[0].strCategory}</Item>
-            <Item>{mealRecipe[0].strArea}</Item>
+            <Item>{mealRecipe.strCategory}</Item>
+            <Item>{mealRecipe.strArea}</Item>
             <Item>
-              <a href={mealRecipe[0].strYoutube}>YOUTUBE</a>
+              <a href={mealRecipe.strYoutube}>YOUTUBE</a>
             </Item>
           </List>
           <List ingridiens>
-            <Item>{mealRecipe[0].strIngredient1}</Item>
-            <Item>{mealRecipe[0].strIngredient1}</Item>
-            <Item>{mealRecipe[0].strIngredient1}</Item>
-            <Item>{mealRecipe[0].strIngredient1}</Item>
-            <Item>{mealRecipe[0].strIngredient1}</Item>
+            <Item>{mealRecipe.strIngredient1}</Item>
+            <Item>{mealRecipe.strIngredient1}</Item>
+            <Item>{mealRecipe.strIngredient1}</Item>
+            <Item>{mealRecipe.strIngredient1}</Item>
+            <Item>{mealRecipe.strIngredient1}</Item>
           </List>
-          <Recipe>{mealRecipe[0].strInstructions}</Recipe>
+          <Recipe>{mealRecipe.strInstructions}</Recipe>
         </Wrapper>
       </Section>
     );

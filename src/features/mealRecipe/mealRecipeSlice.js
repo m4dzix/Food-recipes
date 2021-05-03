@@ -11,7 +11,7 @@ const mealRecipeSlice = createSlice({
     }),
     fetchMealRecipeSuccess: (state, { payload: mealRecipe }) => {
       state.status = "success";
-      state.mealRecipe = mealRecipe;
+      state.mealRecipe = mealRecipe[0];
     },
     fetchMealRecipeError: () => ({
       status: "error",
