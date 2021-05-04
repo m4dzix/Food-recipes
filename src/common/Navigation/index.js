@@ -32,6 +32,9 @@ const Navigation = () => {
           <List>
             {areas.map((area) => (
               <StyledLink
+                onClick={() => {
+                  dispatch(toggleHideMenuList());
+                }}
                 key={area.strArea}
                 href=""
                 to={toRecipeList(area.strArea)}
