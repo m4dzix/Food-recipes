@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const activeClassName = "active";
 
 export const MenuList = styled.section`
   width: 30vw;
@@ -65,7 +67,6 @@ export const Item = styled.li`
   font-weight: 200;
   margin-top: 20px;
   font-size: 40px;
-  color: black;
   font-weight: 500;
   transition: 0.5s ease;
   opacity: 1;
@@ -77,6 +78,13 @@ export const Item = styled.li`
     font-size: 25px;
   }
 `;
-export const StyledLink = styled(Link)`
+
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+  activeClassName,
+}))`
   text-decoration: none;
+  color: black;
+  &.${activeClassName} {
+    text-decoration: underline;
+  }
 `;

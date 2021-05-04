@@ -7,7 +7,7 @@ import {
   selectAreas,
   selectAreasStatus,
 } from "./areasSlice";
-import { MenuList, BurgerMenuIcon, List, Item, StyledLink } from "./styled";
+import { MenuList, BurgerMenuIcon, List, Item, StyledNavLink } from "./styled";
 import { toRecipeList } from "../../routes";
 
 const Navigation = () => {
@@ -31,7 +31,8 @@ const Navigation = () => {
         {areasState === "success" ? (
           <List>
             {areas.map((area) => (
-              <StyledLink
+              <StyledNavLink
+                activeClassName="active"
                 onClick={() => {
                   dispatch(toggleHideMenuList());
                 }}
@@ -40,7 +41,7 @@ const Navigation = () => {
                 to={toRecipeList(area.strArea)}
               >
                 <Item>{area.strArea}</Item>
-              </StyledLink>
+              </StyledNavLink>
             ))}
           </List>
         ) : (
