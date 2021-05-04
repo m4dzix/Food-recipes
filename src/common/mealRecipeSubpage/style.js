@@ -1,10 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const Section = styled.section`
-  background-color: #0009;
-  height: 100vh;
-  padding: 40px;
-`;
 export const Wrapper = styled.div`
   display: grid;
   grid-template-areas:

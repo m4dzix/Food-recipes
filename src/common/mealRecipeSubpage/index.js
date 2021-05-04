@@ -1,14 +1,6 @@
 import React, { useEffect } from "react";
-import {
-  Section,
-  Wrapper,
-  Title,
-  Image,
-  List,
-  Key,
-  Value,
-  Recipe,
-} from "./style";
+import Section from "../Section";
+import { Wrapper, Title, Image, List, Key, Value, Recipe } from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectMealRecipe,
@@ -43,7 +35,7 @@ const MealRecipeSubpage = () => {
     );
 
     return (
-      <Section>
+      <Section list={false}>
         <Wrapper>
           <Title>{mealRecipe.strMeal}</Title>
           <Image url={mealRecipe.strMealThumb} />

@@ -21,7 +21,7 @@ const RecipeListSubpage = () => {
   }, [dispatch, id]);
 
   return (
-    <Section>
+    <Section list={true}>
       {recipeListStatus === "success" ? (
         recipeList.map((recipe) => (
           <Tile key={recipe.id} recipe={recipe}></Tile>
