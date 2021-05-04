@@ -6,9 +6,9 @@ import {
 } from "./mealRecipeSlice";
 import { getMealRecipe } from "./mealRecipeApi";
 
-function* fetchMealRecipeHandler() {
+function* fetchMealRecipeHandler({ payload: id }) {
   try {
-    const mealRecipe = yield call(getMealRecipe);
+    const mealRecipe = yield call(getMealRecipe, id);
     yield put(fetchMealRecipeSuccess(mealRecipe));
   } catch (error) {
     yield put(fetchMealRecipeError);

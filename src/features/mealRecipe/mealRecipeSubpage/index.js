@@ -16,6 +16,7 @@ import {
   fetchMealRecipe,
 } from "../mealRecipeSlice";
 import { useSelectElements, useShowElementsValue } from "./useSelectElement";
+import { useParams } from "react-router-dom";
 
 const MealRecipeSubpage = () => {
   const mealRecipe = useSelector(selectMealRecipe);
@@ -23,10 +24,11 @@ const MealRecipeSubpage = () => {
   const selectElements = useSelectElements();
   const elementsValue = useShowElementsValue();
   const dispatch = useDispatch();
+  const { id } = useParams();
 
   useEffect(() => {
-    dispatch(fetchMealRecipe());
-  }, [dispatch]);
+    dispatch(fetchMealRecipe(id));
+  }, [dispatch, id]);
 
   if (mealRecipeStatus === "success") {
     const ingredients = elementsValue(
