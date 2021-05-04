@@ -4,6 +4,9 @@ export const StyledSection = styled.section`
   background-color: #1118;
   padding: 50px;
   min-height: 100vh;
+  @media (max-width: 400px) {
+    padding: 10px;
+  }
   ${({ list }) =>
     list &&
     css`
