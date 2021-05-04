@@ -10,10 +10,10 @@ const Background = () => {
     <StyledBackground>
       <Image backgroundImage={foodImages[counter]}></Image>
       <Image imageSmall backgroundImage={landscapeImages[counter]}></Image>
-      <Title>
+      {/* <Title>
         Eat & <br />
         Enjoy the food
-      </Title>
+      </Title> */}
     </StyledBackground>
   );
 };

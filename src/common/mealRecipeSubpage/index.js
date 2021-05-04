@@ -14,7 +14,7 @@ import {
   selectMealRecipe,
   selectMealRecipeStatus,
   fetchMealRecipe,
-} from "../mealRecipeSlice";
+} from "../../features/mealRecipe/mealRecipeSlice";
 import { useSelectElements, useShowElementsValue } from "./useSelectElement";
 import { useParams } from "react-router-dom";
 

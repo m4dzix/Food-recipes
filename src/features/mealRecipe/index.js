@@ -1,5 +1,5 @@
 import React from "react";
-import MealRecipeSubpage from "./mealRecipeSubpage/index";
+import MealRecipeSubpage from "../../common/mealRecipeSubpage/index";
 
 const MealRecipe = () => <MealRecipeSubpage />;
 
