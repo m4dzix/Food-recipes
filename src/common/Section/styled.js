@@ -3,8 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledSection = styled.section`
   background-color: #1118;
   padding: 50px;
-  height: 100vh;
-
+  min-height: 100vh;
   ${({ list }) =>
     list &&
     css`
