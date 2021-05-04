@@ -1,5 +1,14 @@
 import React, { useEffect } from "react";
-import { Section, Wrapper, Title, Item, List, Image, Recipe } from "./style";
+import {
+  Section,
+  Wrapper,
+  Title,
+  Image,
+  List,
+  Key,
+  Value,
+  Recipe,
+} from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectMealRecipe,
@@ -36,16 +45,22 @@ const MealRecipeSubpage = () => {
         <Wrapper>
           <Title>{mealRecipe.strMeal}</Title>
           <Image url={mealRecipe.strMealThumb} />
-          <List>
-            <Item>{mealRecipe.strCategory}</Item>
-            <Item>{mealRecipe.strArea}</Item>
-            <Item>
+          <List details>
+            <Key>Category:</Key>
+            <Value>{mealRecipe.strCategory}</Value>
+            <Key>Area:</Key>
+            <Value>{mealRecipe.strArea}</Value>
+            <Key>See on youtube:</Key>
+            <Value>
               <a href={mealRecipe.strYoutube}>YOUTUBE</a>
-            </Item>
+            </Value>
           </List>
-          <List ingredients>
-            {ingredients.map((ingredient) => (
-              <Item key={ingredient}>{ingredient[1]}</Item>
+          <List>
+            {IngredientsAndMeasuresArray.map(([key, value]) => (
+              <React.Fragment key={key}>
+                <Key>{key}</Key>
+                <Value>{value}</Value>
+              </React.Fragment>
             ))}
           </List>
           <Recipe>{mealRecipe.strInstructions}</Recipe>

@@ -35,23 +35,33 @@ export const Image = styled.div`
   background-size: center;
   background-repeat: no-repeat;
 `;
-export const List = styled.ul`
-  grid-area: "details";
-  font-size: 40px;
-  font-weight: bold;
+
+export const List = styled.dl`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 20px;
+  grid-area: "ingridiens";
   list-style: none;
   text-transform: capitalize;
-  ${({ ingredients }) =>
-    ingredients &&
+  ${({ details }) =>
+    details &&
     css`
-      font-size: 20px;
-      font-weight: normal;
-    `}
+      grid-area: "details";
+      font-size: 30px;
+      font-weight: bold;
+      align-items: top;
+      grid-template-rows: repeat(auto-fill, 50px);
+    `};
 `;
-export const Item = styled.li`
-  padding: 7px;
+export const Key = styled.dt`
+  display: inline;
+`;
+export const Value = styled.dd`
+  display: inline;
 `;
 export const Recipe = styled.div`
   grid-area: "recipe";
-  font-size: 20px;
+  font-size: 23px;
+  padding: 10px;
+  text-align: justify;
 `;
