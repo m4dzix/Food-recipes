@@ -6,16 +6,13 @@ import {
   selectMealRecipeStatus,
   fetchMealRecipe,
 } from "../mealRecipeSlice";
-import {
-  useSelectElements,
-  useShowElementsWithValue,
-} from "./useSelectElement";
+import { useSelectElements, useShowElementsValue } from "./useSelectElement";
 
 const MealRecipeSubpage = () => {
   const mealRecipe = useSelector(selectMealRecipe);
   const mealRecipeStatus = useSelector(selectMealRecipeStatus);
   const selectElements = useSelectElements();
-  const elementsWithValue = useShowElementsWithValue();
+  const elementsValue = useShowElementsValue();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,10 +20,17 @@ const MealRecipeSubpage = () => {
   }, [dispatch]);
 
   if (mealRecipeStatus === "success") {
-    const ingredients = elementsWithValue(
+    const ingredients = elementsValue(
       selectElements(mealRecipe, "strIngredient")
     );
-    console.log(ingredients);
+    const measures = elementsValue(selectElements(mealRecipe, "strMeasure"));
+
+    const IngredientsAndMeasuresArray = Object.entries(
+      Object.fromEntries(
+        ingredients.map((_, i) => [ingredients[i], measures[i]])
+      )
+    );
+
     return (
       <Section>
         <Wrapper>
