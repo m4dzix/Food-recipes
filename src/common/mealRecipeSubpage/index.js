@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Section from "../Section";
-import { Wrapper, Title, Image, List, Key, Value, Recipe } from "./style";
+import Tile from "./Tile";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectMealRecipe,
@@ -36,29 +36,10 @@ const MealRecipeSubpage = () => {
 
     return (
       <Section list={false}>
-        <Wrapper>
-          <Title>{mealRecipe.strMeal}</Title>
-          <Image url={mealRecipe.strMealThumb} />
-          <List details>
-            <Key>Category:</Key>
-            <Value>{mealRecipe.strCategory}</Value>
-            <Key>Area:</Key>
-            <Value>{mealRecipe.strArea}</Value>
-            <Key>See on youtube:</Key>
-            <Value>
-              <a href={mealRecipe.strYoutube}>YOUTUBE</a>
-            </Value>
-          </List>
-          <List>
-            {IngredientsAndMeasuresArray.map(([key, value]) => (
-              <React.Fragment key={key}>
-                <Key>{key}</Key>
-                <Value>{value}</Value>
-              </React.Fragment>
-            ))}
-          </List>
-          <Recipe>{mealRecipe.strInstructions}</Recipe>
-        </Wrapper>
+        <Tile
+          mealRecipe={mealRecipe}
+          array={IngredientsAndMeasuresArray}
+        ></Tile>
       </Section>
     );
   } else {
