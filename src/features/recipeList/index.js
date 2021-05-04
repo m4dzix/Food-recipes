@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Section from "../../common/RecipeListSubpage/Section";
-import Tile from "../../common/RecipeListSubpage/Tile";
+import Section from "./RecipeListSubpage/Section";
+import Tile from "./RecipeListSubpage/Tile";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -8,6 +8,7 @@ import {
   selectRecipeList,
   selectRecipeListStatus,
 } from "./recipeListSlice";
+import { toRecipe } from "../../routes";
 
 const RecipeList = () => {
   const recipeList = useSelector(selectRecipeList);
@@ -26,6 +27,7 @@ const RecipeList = () => {
         recipeList.map((recipe) => (
           <Tile
             key={recipe.id}
+            path={toRecipe(recipe.idMeal)}
             image={recipe.strMealThumb}
             title={recipe.strMeal}
           ></Tile>
