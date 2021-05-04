@@ -26,8 +26,8 @@ export const Title = styled.h2`
 export const Image = styled.div`
   grid-area: "image";
   background: url("${({ url }) => url}");
-  background-position: cover;
-  background-size: center;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 `;
 
