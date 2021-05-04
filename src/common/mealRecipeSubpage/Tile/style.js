@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-
   padding: 40px;
   background-color: whitesmoke;
 `;
@@ -30,10 +29,11 @@ export const Image = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 `;
-
 export const List = styled.dl`
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(auto, 30px));
+  grid-gap: 7px;
   font-size: 20px;
   grid-area: "ingridiens";
   list-style: none;
