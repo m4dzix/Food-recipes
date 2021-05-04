@@ -1,12 +1,6 @@
-export const getRecipeList = async (area) => {
-  const response = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
-  );
+import { fetchFromApi } from "../../fetchFromApi";
 
-  if (!response.ok) {
-    throw new Error(response.statusText);
-  }
-
-  const recipeList = await response.json();
-  return recipeList.meals;
-};
+export const getRecipeList = (area) =>
+  fetchFromApi({
+    path: `/filter.php?a=${area}`,
+  });

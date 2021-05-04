@@ -7,9 +7,9 @@ const recipeListSlice = createSlice({
   },
   reducers: {
     fetchRecipeList: () => ({ status: "loading" }),
-    fetchRecipeListSuccess: (state, { payload: recipeList }) => {
+    fetchRecipeListSuccess: (state, { payload: reply }) => {
       state.status = "success";
-      state.recipeList = recipeList;
+      state.recipeList = reply;
     },
     fetchRecipeListError: () => ({
       status: "error",

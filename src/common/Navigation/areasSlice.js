@@ -13,9 +13,9 @@ const areasSlice = createSlice({
     fetchAreas: () => ({
       status: "loading",
     }),
-    fetchAreasSuccess: (state, { payload: areas }) => {
+    fetchAreasSuccess: (state, { payload: reply }) => {
       state.status = "success";
-      state.meals = areas;
+      state.meals = reply;
     },
     fetchAreasError: () => ({
       status: "error",
