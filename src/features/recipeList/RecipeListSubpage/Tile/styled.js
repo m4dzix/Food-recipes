@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Wrapper = styled.article`
+export const StyledLink = styled(Link)`
   padding: 16px;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   background-color: whitesmoke;
@@ -8,8 +9,14 @@ export const Wrapper = styled.article`
   grid-gap: 16px;
   grid-template-rows: 334px auto;
   height: 100%;
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
   @media (max-width: 812px) and (orientation: landscape) {
     grid-template-rows: 234px auto;
+  }
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 export const Image = styled.div`

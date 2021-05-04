@@ -1,12 +1,12 @@
 import React from "react";
-import { Wrapper, Image, Title } from "./styled";
+import { StyledLink, Image, Title } from "./styled";
 
-const Tile = ({ title, image }) => {
+const Tile = ({ path, title, image }) => {
   return (
-    <Wrapper>
+    <StyledLink to={path}>
       <Image url={image}></Image>
       <Title>{title}</Title>
-    </Wrapper>
+    </StyledLink>
   );
 };
 
