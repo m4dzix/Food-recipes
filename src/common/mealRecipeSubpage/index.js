@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Error from "../../common/Error";
+import Loader from "../../common/Loading";
 import Section from "../Section";
 import Tile from "./Tile";
 import { useDispatch, useSelector } from "react-redux";
@@ -42,8 +44,10 @@ const MealRecipeSubpage = () => {
         ></Tile>
       </Section>
     );
+  } else if (mealRecipeStatus === "success") {
+    return <Error />;
   } else {
-    return <div>ERROR</div>;
+    return <Loader />;
   }
 };
 

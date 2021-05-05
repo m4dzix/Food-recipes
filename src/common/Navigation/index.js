@@ -9,6 +9,7 @@ import {
 } from "./areasSlice";
 import { MenuList, BurgerMenuIcon, List, Item, StyledNavLink } from "./styled";
 import { toRecipeList } from "../../routes";
+import Error from "../Error";
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ const Navigation = () => {
             ))}
           </List>
         ) : (
-          <div></div>
+          <Error />
         )}
       </MenuList>
     </>

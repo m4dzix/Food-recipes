@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import Section from "../Section";
+import Error from "../../common/Error/";
+import Loader from "../../common/Loading/";
 import Tile from "./Tile";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -20,17 +22,27 @@ const RecipeListSubpage = () => {
     dispatch(fetchRecipeList(id));
   }, [dispatch, id]);
 
-  return (
-    <Section list={true}>
-      {recipeListStatus === "success" ? (
-        recipeList.map((recipe) => (
+  if (recipeListStatus === "success") {
+    return (
+      <Section list={true}>
+        {recipeList.map((recipe) => (
           <Tile key={recipe.id} recipe={recipe}></Tile>
-        ))
-      ) : (
-        <div></div>
-      )}
-    </Section>
-  );
+        ))}
+      </Section>
+    );
+  } else if (recipeListStatus === "error") {
+    return (
+      <Section list={false}>
+        <Error />
+      </Section>
+    );
+  } else {
+    return (
+      <Section list={false}>
+        <Loader />
+      </Section>
+    );
+  }
 };
 
 export default RecipeListSubpage;
