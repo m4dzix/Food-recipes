@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+**LIVE LINK:** [https://m4dzix.github.io/Food-recipes/](https://m4dzix.github.io/Food-recipes/)
+
 Website to search for recipes from many parts of the world.
 - click the menu button
 - select the region
