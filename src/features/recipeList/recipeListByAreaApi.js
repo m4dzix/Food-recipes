@@ -1,6 +1,6 @@
 import { fetchFromApi } from "../../fetchFromApi";
 
-export const getRecipeList = (area) =>
+export const getRecipeListByArea = (area) =>
   fetchFromApi({
     path: `/filter.php?a=${area}`,
   });

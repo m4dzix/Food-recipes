@@ -3,18 +3,14 @@ import Section from "../Section";
 import Error from "../../common/Error/";
 import Loader from "../../common/Loading/";
 import Tile from "./Tile";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import {
+
+const RecipeListSubpage = ({
   fetchRecipeList,
-  selectRecipeList,
-  selectRecipeListStatus,
-} from "../../features/recipeList/recipeListSlice";
-
-const RecipeListSubpage = () => {
-  const recipeList = useSelector(selectRecipeList);
-  const recipeListStatus = useSelector(selectRecipeListStatus);
-
+  recipeList,
+  recipeListStatus,
+}) => {
   const dispatch = useDispatch();
   const { id } = useParams();
 

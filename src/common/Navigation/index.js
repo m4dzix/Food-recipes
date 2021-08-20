@@ -8,7 +8,7 @@ import {
   selectAreasStatus,
 } from "./areasSlice";
 import { MenuList, BurgerMenuIcon, List, Item, StyledNavLink } from "./styled";
-import { toRecipeList } from "../../routes";
+import { toRecipeListByArea } from "../../routes";
 import Error from "../Error";
 
 const Navigation = () => {
@@ -39,7 +39,7 @@ const Navigation = () => {
                 }}
                 key={area.strArea}
                 href=""
-                to={toRecipeList(area.strArea)}
+                to={toRecipeListByArea(area.strArea)}
               >
                 <Item>{area.strArea}</Item>
               </StyledNavLink>
