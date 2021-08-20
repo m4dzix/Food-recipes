@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/Food-recipes/static/js/main.a007973c.chunk.js",
+    "main.js.map": "/Food-recipes/static/js/main.a007973c.chunk.js.map",
+    "runtime-main.js": "/Food-recipes/static/js/runtime-main.8143848d.js",
+    "runtime-main.js.map": "/Food-recipes/static/js/runtime-main.8143848d.js.map",
+    "static/js/2.a9037a72.chunk.js": "/Food-recipes/static/js/2.a9037a72.chunk.js",
+    "static/js/2.a9037a72.chunk.js.map": "/Food-recipes/static/js/2.a9037a72.chunk.js.map",
+    "static/js/3.8ca636d0.chunk.js": "/Food-recipes/static/js/3.8ca636d0.chunk.js",
+    "static/js/3.8ca636d0.chunk.js.map": "/Food-recipes/static/js/3.8ca636d0.chunk.js.map",
+    "index.html": "/Food-recipes/index.html",
+    "static/js/2.a9037a72.chunk.js.LICENSE.txt": "/Food-recipes/static/js/2.a9037a72.chunk.js.LICENSE.txt",
+    "static/media/asiaFood.576c4278.jpg": "/Food-recipes/static/media/asiaFood.576c4278.jpg",
+    "static/media/asiaLandscape.bce3e271.jpg": "/Food-recipes/static/media/asiaLandscape.bce3e271.jpg",
+    "static/media/danger.1a50ec90.svg": "/Food-recipes/static/media/danger.1a50ec90.svg",
+    "static/media/greekFood.c44953f7.jpg": "/Food-recipes/static/media/greekFood.c44953f7.jpg",
+    "static/media/greekLandscape.41938a50.jpg": "/Food-recipes/static/media/greekLandscape.41938a50.jpg",
+    "static/media/italyFood.dd1c8384.jpg": "/Food-recipes/static/media/italyFood.dd1c8384.jpg",
+    "static/media/italyLandscape.0576de9e.jpg": "/Food-recipes/static/media/italyLandscape.0576de9e.jpg",
+    "static/media/loader.17b2cd24.svg": "/Food-recipes/static/media/loader.17b2cd24.svg",
+    "static/media/logo.e8ea20de.png": "/Food-recipes/static/media/logo.e8ea20de.png",
+    "static/media/mexicoFood.7a5c73b7.jpg": "/Food-recipes/static/media/mexicoFood.7a5c73b7.jpg",
+    "static/media/mexicoLandscape.34a0bb55.jpg": "/Food-recipes/static/media/mexicoLandscape.34a0bb55.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8143848d.js",
+    "static/js/2.a9037a72.chunk.js",
+    "static/js/main.a007973c.chunk.js"
+  ]
+}
