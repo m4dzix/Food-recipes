@@ -7,17 +7,18 @@ export const StyledTopBar = styled.nav`
   margin: 0;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee8;
-  @media (max-width: 420px) {
+  background-color: ${({ theme }) => theme.colors.galleryTransparent};
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     padding: 0px;
   }
 `;
 export const Logo = styled.img`
   width: 250px;
-  @media (max-width: 823px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     width: 150px;
   }
-  @media (max-width: 420px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     width: 200px;
     padding: 5px;
   }

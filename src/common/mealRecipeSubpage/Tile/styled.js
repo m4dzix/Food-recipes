@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 40px;
-  background-color: whitesmoke;
+  background-color: ${({ theme }) => theme.colors.whitesmoke};
   @media (max-width: 430px) {
     grid-template-areas:
       "title "
@@ -25,7 +25,8 @@ export const Wrapper = styled.div`
     grid-template-columns: none;
     padding: 10px;
   }
-  @media (max-width: 812px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     grid-template-areas:
       "title "
       "image"
@@ -41,7 +42,8 @@ export const Title = styled.h2`
   grid-area: title;
   justify-self: center;
   font-size: 50px;
-  @media (max-width: 812px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     font-size: 30px;
   }
   @media (max-width: 430px) {
@@ -66,7 +68,7 @@ export const List = styled.dl`
   grid-area: ingridiens;
   list-style: none;
   text-transform: capitalize;
-  @media (max-width: 812px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}) {
     font-size: 15px;
     grid-template-rows: repeat(auto-fill, 20px);
   }
@@ -78,10 +80,11 @@ export const List = styled.dl`
       font-weight: bold;
       align-items: top;
       grid-template-rows: repeat(auto-fill, 50px);
-      @media (max-width: 812px) and (orientation: landscape) {
+      @media (max-width: ${({ theme }) =>
+          theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
         grid-template-rows: repeat(auto-fill, 20px);
       }
-      @media (max-width: 430px) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
         font-size: 15px;
         grid-template-rows: repeat(auto-fill, 20px);
       }
@@ -99,7 +102,7 @@ export const Recipe = styled.div`
   font-size: 23px;
   padding: 10px;
   text-align: justify;
-  @media (max-width: 812px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}) {
     font-size: 15px;
   }
 `;

@@ -4,18 +4,20 @@ import { Link } from "react-router-dom";
 export const StyledLink = styled(Link)`
   padding: 16px;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  background-color: whitesmoke;
+  background-color: ${({ theme }) => theme.colors.whitesmoke};
   display: grid;
   grid-gap: 16px;
   grid-template-rows: 334px auto;
   height: 100%;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   text-decoration: none;
   transition: 0.5s;
-  @media (max-width: 830px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     grid-template-rows: 150px auto;
   }
-  @media (max-width: 430px) and (orientation: portrait) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.smallMobile}) and (orientation: portrait) {
     grid-template-rows: 150px auto;
     padding: 10px;
   }
@@ -25,7 +27,6 @@ export const StyledLink = styled(Link)`
 `;
 export const Image = styled.div`
   border-radius: 5px;
-  background-color: silver;
   background: url("${({ url }) => url}");
   background-position: center;
   background-size: cover;
@@ -38,10 +39,12 @@ export const Title = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 830px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     font-size: 20px;
   }
-  @media (max-width: 430px) and (orientation: portrait) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.smallMobile}) and (orientation: portrait) {
     font-size: 15px;
   }
 `;

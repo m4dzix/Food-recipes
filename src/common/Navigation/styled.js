@@ -7,7 +7,7 @@ const activeClassName = "active";
 export const MenuList = styled.section`
   width: 30vw;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: ${({ theme }) => theme.colors.whitesmoke};
   filter: sepia(100%);
   position: fixed;
   z-index: 1;
@@ -20,7 +20,8 @@ export const MenuList = styled.section`
     css`
       right: 0px;
     `}
-  @media (max-width: 823px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+    theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     width: 100vw;
     right: -100vw;
     ${({ hideMenuList }) =>
@@ -29,7 +30,7 @@ export const MenuList = styled.section`
         right: 0px;
       `}
   }
-  @media (max-width: 420px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
     width: 100vw;
     right: -100vw;
     ${({ hideMenuList }) =>
@@ -44,11 +45,11 @@ export const BurgerMenuIcon = styled(Menu)`
   z-index: 2;
   right: 20px;
   top: 20px;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   box-shadow: 0px 3px 10px #111;
   height: 50px;
   cursor: pointer;
-  @media (max-width: 823px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}) {
     height: 30px;
   }
 `;
@@ -57,11 +58,11 @@ export const List = styled.ul`
   grid-template-columns: 1fr;
   padding: 40px;
   list-style: none;
-  @media (max-width: 823px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
-
 export const Item = styled.li`
   position: relative;
   font-weight: 200;
@@ -70,20 +71,19 @@ export const Item = styled.li`
   font-weight: 500;
   transition: 0.5s ease;
   opacity: 1;
-
   &:hover {
     font-weight: bold;
   }
-  @media (max-width: 823px) and (orientation: landscape) {
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
     font-size: 25px;
   }
 `;
-
 export const StyledNavLink = styled(NavLink).attrs(() => ({
   activeClassName,
 }))`
   text-decoration: none;
-  color: black;
+  color: ${({ theme }) => theme.colors.black};
   &.${activeClassName} {
     text-decoration: underline;
   }

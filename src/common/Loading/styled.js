@@ -12,7 +12,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 40px;
 `;
 export const Loader = styled.img`

@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 40px;
 `;
 export const Subheader = styled.h2`
@@ -18,8 +18,8 @@ export const Text = styled.h3`
 `;
 export const Button = styled.button`
   padding: 16px 24px;
-  color: whitesmoke;
-  background-color: #222;
+  color: ${({ theme }) => theme.colors.whitesmoke};
+  background-color: ${({ theme }) => theme.colors.raisinBlack};
   font-weight: bold;
   font-size: 15px;
 `;
