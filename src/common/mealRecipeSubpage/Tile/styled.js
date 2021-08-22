@@ -14,18 +14,7 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   padding: 40px;
   background-color: whitesmoke;
-  @media (max-width: 768px) {
-    grid-template-areas:
-      "title "
-      "image"
-      "details"
-      "ingridiens"
-      "recipe";
-    grid-template-rows: auto minmax(auto, 420px) auto auto auto;
-    grid-template-columns: none;
-    padding: 10px;
-  }
-  @media (max-width: 812px) and (orientation: landscape) {
+  @media (max-width: 430px) {
     grid-template-areas:
       "title "
       "image"
@@ -36,11 +25,28 @@ export const Wrapper = styled.div`
     grid-template-columns: none;
     padding: 10px;
   }
+  @media (max-width: 812px) and (orientation: landscape) {
+    grid-template-areas:
+      "title "
+      "image"
+      "details"
+      "ingridiens"
+      "recipe";
+    grid-template-rows: auto minmax(auto, 220px) auto auto auto;
+    grid-template-columns: none;
+    padding: 10px;
+  }
 `;
 export const Title = styled.h2`
   grid-area: title;
   justify-self: center;
   font-size: 50px;
+  @media (max-width: 812px) and (orientation: landscape) {
+    font-size: 30px;
+  }
+  @media (max-width: 430px) {
+    font-size: 30px;
+  }
 `;
 export const Image = styled.div`
   grid-area: image;
@@ -60,6 +66,10 @@ export const List = styled.dl`
   grid-area: ingridiens;
   list-style: none;
   text-transform: capitalize;
+  @media (max-width: 812px) {
+    font-size: 15px;
+    grid-template-rows: repeat(auto-fill, 20px);
+  }
   ${({ details }) =>
     details &&
     css`
@@ -68,11 +78,12 @@ export const List = styled.dl`
       font-weight: bold;
       align-items: top;
       grid-template-rows: repeat(auto-fill, 50px);
-      @media (max-width: 768px) {
-        font-weight: normal;
+      @media (max-width: 812px) and (orientation: landscape) {
+        grid-template-rows: repeat(auto-fill, 20px);
       }
-      @media (max-width: 400px) {
-        font-size: 20px;
+      @media (max-width: 430px) {
+        font-size: 15px;
+        grid-template-rows: repeat(auto-fill, 20px);
       }
     `};
 `;
@@ -81,10 +92,14 @@ export const Key = styled.dt`
 `;
 export const Value = styled.dd`
   display: inline;
+  margin-left: 40px;
 `;
 export const Recipe = styled.div`
   grid-area: recipe;
   font-size: 23px;
   padding: 10px;
   text-align: justify;
+  @media (max-width: 812px) {
+    font-size: 15px;
+  }
 `;
