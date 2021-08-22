@@ -21,4 +21,11 @@ export const Loader = styled.img`
 export const Subheader = styled.h2`
   font-weight: bold;
   font-size: 50px;
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
+    font-size: 20px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 20px;
+  }
 `;
