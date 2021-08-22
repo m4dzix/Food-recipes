@@ -13,8 +13,9 @@ export const StyledTopBar = styled.nav`
   }
 `;
 export const Logo = styled.img`
+  width: 250px;
   @media (max-width: 823px) and (orientation: landscape) {
-    width: 200px;
+    width: 150px;
   }
   @media (max-width: 420px) {
     width: 200px;

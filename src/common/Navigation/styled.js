@@ -40,16 +40,16 @@ export const MenuList = styled.section`
   }
 `;
 export const BurgerMenuIcon = styled(Menu)`
-  position: fixed;
+  position: absolute;
   z-index: 2;
   right: 20px;
   top: 20px;
   color: black;
   box-shadow: 0px 3px 10px #111;
-  height: 80px;
+  height: 50px;
   cursor: pointer;
-  @media (max-width: 823px) and (orientation: landscape) {
-    height: 50px;
+  @media (max-width: 823px) {
+    height: 30px;
   }
 `;
 export const List = styled.ul`
@@ -66,7 +66,7 @@ export const Item = styled.li`
   position: relative;
   font-weight: 200;
   margin-top: 20px;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 500;
   transition: 0.5s ease;
   opacity: 1;
