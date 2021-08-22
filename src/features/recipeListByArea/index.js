@@ -7,7 +7,7 @@ import {
   selectRecipeListByAreaStatus,
 } from "./recipeListByAreaSlice";
 
-const RecipeList = () => {
+const RecipeListByArea = () => {
   const recipeListByArea = useSelector(selectRecipeListByArea);
   const recipeListByAreaStatus = useSelector(selectRecipeListByAreaStatus);
   return (
@@ -21,4 +21,4 @@ const RecipeList = () => {
 
 <RecipeListSubpage />;
 
-export default RecipeList;
+export default RecipeListByArea;

@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import areasReducer from "./common/Navigation/areasSlice";
-import recipeListReducerByArea from "./features/recipeList/recipeListByAreaSlice";
+import recipeListReducerByArea from "./features/recipeListByArea/recipeListByAreaSlice";
 import recipeListByCategoryReducer from "./features/recipeListByCategory/recipeListByCategorySlice";
 import mealRecipeReducer from "./features/mealRecipe/mealRecipeSlice";
 import saga from "./saga";

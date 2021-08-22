@@ -6,7 +6,7 @@ import {
 } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
-import RecipeList from "../features/recipeList/index";
+import RecipeListByArea from "../features/recipeListByArea/index";
 import RecipeListByCategory from "../features/recipeListByCategory/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import MealRecipe from "../features/mealRecipe";
@@ -18,7 +18,7 @@ function App() {
       <TopBar />
       <Switch>
         <Route path={toRecipeListByArea(":id")}>
-          <RecipeList />
+          <RecipeListByArea />
         </Route>
         <Route path={toRecipeListByCategory(":id")}>
           <RecipeListByCategory />
