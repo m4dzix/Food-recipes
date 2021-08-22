@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledSection = styled.section`
   background-color: #1118;
   padding: 50px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     padding: 10px;
   }
   ${({ list }) =>
@@ -16,16 +16,15 @@ export const StyledSection = styled.section`
       align-items: center;
       justify-content: center;
       @media (max-width: ${({ theme }) =>
-          theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+          theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
         grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
         grid-template-rows: auto 1fr;
       }
-      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         grid-template-rows: auto 1fr;
       }
-      @media (max-width: ${({ theme }) =>
-          theme.breakpoints.smallMobile}) and (orientation: portrait) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
         padding: 10px;
       }

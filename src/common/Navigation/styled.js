@@ -21,7 +21,7 @@ export const MenuList = styled.section`
       right: 0px;
     `}
   @media (max-width: ${({ theme }) =>
-    theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+    theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     width: 100vw;
     right: -100vw;
     ${({ hideMenuList }) =>
@@ -30,7 +30,7 @@ export const MenuList = styled.section`
         right: 0px;
       `}
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     width: 100vw;
     right: -100vw;
     ${({ hideMenuList }) =>
@@ -49,7 +49,7 @@ export const BurgerMenuIcon = styled(Menu)`
   box-shadow: 0px 3px 10px #111;
   height: 50px;
   cursor: pointer;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}px) {
     height: 30px;
   }
 `;
@@ -59,7 +59,7 @@ export const List = styled.ul`
   padding: 40px;
   list-style: none;
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
@@ -75,7 +75,7 @@ export const Item = styled.li`
     font-weight: bold;
   }
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     font-size: 25px;
   }
 `;

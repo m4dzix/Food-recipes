@@ -8,17 +8,17 @@ export const StyledTopBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.galleryTransparent};
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     padding: 0px;
   }
 `;
 export const Logo = styled.img`
   width: 250px;
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     width: 150px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     width: 200px;
     padding: 5px;
   }

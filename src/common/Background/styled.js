@@ -9,7 +9,7 @@ export const StyledBackground = styled.div`
   z-index: -1;
   top: 0;
   right: 0;
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -25,7 +25,7 @@ export const Image = styled.div`
     props.imageSmall &&
     css`
       border-left: 5px solid whitesmoke;
-      @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
         display: none;
       }
     `}
@@ -40,14 +40,14 @@ export const Title = styled.h1`
   text-shadow: 1px 0px 15px ${({ theme }) => theme.colors.chineseBlack};
   letter-spacing: 5px;
   line-height: 1.1;
-  @media ${({ theme }) => theme.breakpoints.tablet} {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     font-size: 120px;
   }
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     display: none;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     display: none;
   }
 `;

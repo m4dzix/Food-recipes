@@ -13,11 +13,11 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   transition: 0.5s;
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     grid-template-rows: 150px auto;
   }
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.smallMobile}) and (orientation: portrait) {
+      theme.breakpoints.smallMobile}px) and (orientation: portrait) {
     grid-template-rows: 150px auto;
     padding: 10px;
   }
@@ -40,11 +40,11 @@ export const Title = styled.header`
   align-items: center;
   justify-content: center;
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     font-size: 20px;
   }
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.smallMobile}) and (orientation: portrait) {
+      theme.breakpoints.smallMobile}px) and (orientation: portrait) {
     font-size: 15px;
   }
 `;

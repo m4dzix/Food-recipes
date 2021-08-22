@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
     padding: 10px;
   }
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     grid-template-areas:
       "title "
       "image"
@@ -43,10 +43,10 @@ export const Title = styled.h2`
   justify-self: center;
   font-size: 50px;
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     font-size: 30px;
   }
-  @media (max-width: 430px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
     font-size: 30px;
   }
 `;
@@ -68,7 +68,7 @@ export const List = styled.dl`
   grid-area: ingridiens;
   list-style: none;
   text-transform: capitalize;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}px) {
     font-size: 15px;
     grid-template-rows: repeat(auto-fill, 20px);
   }
@@ -81,10 +81,10 @@ export const List = styled.dl`
       align-items: top;
       grid-template-rows: repeat(auto-fill, 50px);
       @media (max-width: ${({ theme }) =>
-          theme.breakpoints.mobileLandscape}) and (orientation: landscape) {
+          theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
         grid-template-rows: repeat(auto-fill, 20px);
       }
-      @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
         font-size: 15px;
         grid-template-rows: repeat(auto-fill, 20px);
       }
@@ -102,7 +102,7 @@ export const Recipe = styled.div`
   font-size: 23px;
   padding: 10px;
   text-align: justify;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}px) {
     font-size: 15px;
   }
 `;
