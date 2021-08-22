@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Wrapper, Title, Image, List, Key, Value, Recipe } from "./style";
+import { Wrapper, Title, Image, List, Key, Value, Recipe } from "./styled";
 import { toRecipeListByArea, toRecipeListByCategory } from "../../../routes";
 
 const MealRecipeSubpage = ({ mealRecipe, array }) => (
@@ -17,8 +17,8 @@ const MealRecipeSubpage = ({ mealRecipe, array }) => (
         {mealRecipe.strArea}
       </Value>
       <Key>See on youtube:</Key>
-      <Value>
-        <a href={mealRecipe.strYoutube}>YOUTUBE</a>
+      <Value as={"a"} href={mealRecipe.strYoutube}>
+        YOUTUBE
       </Value>
     </List>
     <List>
