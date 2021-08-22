@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/Food-recipes/static/js/main.7c0a228c.chunk.js",
-    "main.js.map": "/Food-recipes/static/js/main.7c0a228c.chunk.js.map",
+    "main.js": "/Food-recipes/static/js/main.3723f8dc.chunk.js",
+    "main.js.map": "/Food-recipes/static/js/main.3723f8dc.chunk.js.map",
     "runtime-main.js": "/Food-recipes/static/js/runtime-main.8143848d.js",
     "runtime-main.js.map": "/Food-recipes/static/js/runtime-main.8143848d.js.map",
-    "static/js/2.a9037a72.chunk.js": "/Food-recipes/static/js/2.a9037a72.chunk.js",
-    "static/js/2.a9037a72.chunk.js.map": "/Food-recipes/static/js/2.a9037a72.chunk.js.map",
+    "static/js/2.e5c6d322.chunk.js": "/Food-recipes/static/js/2.e5c6d322.chunk.js",
+    "static/js/2.e5c6d322.chunk.js.map": "/Food-recipes/static/js/2.e5c6d322.chunk.js.map",
     "static/js/3.8ca636d0.chunk.js": "/Food-recipes/static/js/3.8ca636d0.chunk.js",
     "static/js/3.8ca636d0.chunk.js.map": "/Food-recipes/static/js/3.8ca636d0.chunk.js.map",
     "index.html": "/Food-recipes/index.html",
-    "static/js/2.a9037a72.chunk.js.LICENSE.txt": "/Food-recipes/static/js/2.a9037a72.chunk.js.LICENSE.txt",
+    "static/js/2.e5c6d322.chunk.js.LICENSE.txt": "/Food-recipes/static/js/2.e5c6d322.chunk.js.LICENSE.txt",
     "static/media/asiaFood.576c4278.jpg": "/Food-recipes/static/media/asiaFood.576c4278.jpg",
     "static/media/asiaLandscape.bce3e271.jpg": "/Food-recipes/static/media/asiaLandscape.bce3e271.jpg",
     "static/media/danger.1a50ec90.svg": "/Food-recipes/static/media/danger.1a50ec90.svg",
@@ -24,7 +24,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8143848d.js",
-    "static/js/2.a9037a72.chunk.js",
-    "static/js/main.7c0a228c.chunk.js"
+    "static/js/2.e5c6d322.chunk.js",
+    "static/js/main.3723f8dc.chunk.js"
   ]
 }
