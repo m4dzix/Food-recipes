@@ -4,7 +4,7 @@ import LoaderIcon from "../../assets/loader.svg";
 
 const Loader = () => (
   <Wrapper>
-    <img src={LoaderIcon} />
+    <img src={LoaderIcon} alt="Loader" />
     <Subheader>Loading...</Subheader>
   </Wrapper>
 );
