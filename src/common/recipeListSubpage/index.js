@@ -22,7 +22,7 @@ const RecipeListSubpage = ({
     return (
       <Section list={true}>
         {recipeList.map((recipe) => (
-          <Tile key={recipe.id} recipe={recipe}></Tile>
+          <Tile key={recipe} recipe={recipe}></Tile>
         ))}
       </Section>
     );
