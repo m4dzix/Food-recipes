@@ -8,12 +8,12 @@ const Background = () => {
 
   return (
     <StyledBackground>
-      <Image backgroundImage={foodImages[counter]}></Image>
+      <Image backgroundImage={foodImages[counter]} alt=""></Image>
       <Image imageSmall backgroundImage={landscapeImages[counter]}></Image>
-      {/* <Title>
+      <Title>
         Eat & <br />
         Enjoy the food
-      </Title> */}
+      </Title>
     </StyledBackground>
   );
 };
