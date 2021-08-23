@@ -7,7 +7,6 @@ import {
 import { getRecipeListByCategory } from "./recipeListByCategoryApi";
 
 function* fetchRecipeListByCategoryHandler({ payload: area }) {
-  console.log(area);
   try {
     const recipeListByCategory = yield call(getRecipeListByCategory, area);
     yield put(fetchRecipeListByCategorySuccess(recipeListByCategory));
