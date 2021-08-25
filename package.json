@@ -1,8 +1,8 @@
 {
-  "name": "food",
+  "name": "food-recipes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://m4dzix.github.io/Food-recipes/",
+  "homepage": "https://m4dzix.github.io/food-recipes/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@styled-icons/boxicons-regular": "^10.23.0",
