@@ -9,7 +9,7 @@ Website to search for recipes from many parts of the world.
 - click the menu button
 - select the region
 - select the recipe you are interested in
-  -click a category value to view all meals in that category
+- click a category value to view all meals in that category
 - click on the logo to go back to the home page
 
 ![How this works Gif](src/assets/actionsGif.gif)
