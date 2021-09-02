@@ -10,4 +10,4 @@ export const useSelectElements = () => (elements, key) =>
     .filter((element) => element !== undefined);
 
 export const useShowElementsValue = () => (array, number = 1) =>
-  array.filter(([_, value]) => value).map((i) => i[number]);
+  array.filter(([value]) => value).map((i) => i[number]);
