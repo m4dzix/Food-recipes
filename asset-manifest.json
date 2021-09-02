@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/food-recipes/static/js/main.e5f1e750.chunk.js",
-    "main.js.map": "/food-recipes/static/js/main.e5f1e750.chunk.js.map",
+    "main.js": "/food-recipes/static/js/main.507b5d6b.chunk.js",
+    "main.js.map": "/food-recipes/static/js/main.507b5d6b.chunk.js.map",
     "runtime-main.js": "/food-recipes/static/js/runtime-main.df04061b.js",
     "runtime-main.js.map": "/food-recipes/static/js/runtime-main.df04061b.js.map",
     "static/js/2.b8744ca3.chunk.js": "/food-recipes/static/js/2.b8744ca3.chunk.js",
@@ -25,6 +25,6 @@
   "entrypoints": [
     "static/js/runtime-main.df04061b.js",
     "static/js/2.b8744ca3.chunk.js",
-    "static/js/main.e5f1e750.chunk.js"
+    "static/js/main.507b5d6b.chunk.js"
   ]
 }
