@@ -3,13 +3,15 @@ import {
   toRecipeListByArea,
   toRecipeListByCategory,
   toRecipe,
+  toMyRecipes,
 } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
 import RecipeListByArea from "../features/recipeListByArea/index";
 import RecipeListByCategory from "../features/recipeListByCategory/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import MealRecipe from "../features/mealRecipe";
+import MealRecipe from "../features/mealRecipe/index";
+import MyRecipes from "../features/myRecipes";
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
         </Route>
         <Route path={toRecipe(":id")}>
           <MealRecipe />
+        </Route>
+        <Route path={toMyRecipes()}>
+          <MyRecipes />
         </Route>
       </Switch>
     </HashRouter>

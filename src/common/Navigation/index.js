@@ -7,8 +7,9 @@ import {
   selectAreas,
   selectAreasStatus,
 } from "./areasSlice";
+import { Link } from "react-router-dom";
 import { MenuList, BurgerMenuIcon, List, Item, StyledNavLink } from "./styled";
-import { toRecipeListByArea } from "../../routes";
+import { toRecipeListByArea, toMyRecipes } from "../../routes";
 import Error from "../Error";
 
 const Navigation = () => {
@@ -31,6 +32,16 @@ const Navigation = () => {
       <MenuList hideMenuList={isHideMenuList}>
         {areasState === "success" ? (
           <List>
+            <Item
+              as={Link}
+              to={toMyRecipes()}
+              onClick={() => {
+                dispatch(toggleHideMenuList());
+              }}
+            >
+              My Recipes
+            </Item>
+
             {areas.map((area) => (
               <StyledNavLink
                 activeClassName="active"
