@@ -21,7 +21,6 @@ const Navigation = () => {
   useEffect(() => {
     dispatch(fetchAreas());
   }, [dispatch]);
-
   return (
     <>
       <BurgerMenuIcon
