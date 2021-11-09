@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Form = styled.form`
   padding: 30px;
@@ -6,13 +6,15 @@ export const Form = styled.form`
   background-color: ${({ theme }) => theme.colors.whitesmoke};
   max-width: 1000px;
   margin: 0 auto;
-  flex-wrap: nowrap;
+  grid-template-columns: repeat(2, 1fr);
 `;
 export const Label = styled.label`
   font-size: 25px;
   display: grid;
   grid-template-rows: auto 1fr;
   margin: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
 `;
 export const Input = styled.input`
   padding: 5px;
@@ -21,13 +23,17 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   padding: 5px;
   resize: vertical;
+  grid-column-start: 1;
+  grid-column-end: 3;
 `;
-export const Legend = styled.legend`
-  font-size: 35px;
-  padding: 10px 50px;
-  text-align: center;
-`;
+
 export const IngridientField = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  ${({ measure }) =>
+    measure &&
+    css`
+      grid-column-start: 2;
+      grid-column-end: 3;
+    `}
 `;
