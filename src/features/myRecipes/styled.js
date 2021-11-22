@@ -15,25 +15,27 @@ export const Label = styled.label`
   margin: 10px;
   grid-column-start: 1;
   grid-column-end: 3;
+  ${({ ingredient }) =>
+  ingredient &&
+  css`
+  grid-column-start: 1;
+  grid-column-end: 2;
+  `}
+ ${({ measure }) =>
+  measure &&
+  css`
+    grid-column-start: 2;
+    grid-column-end: 3;
+  `}
 `;
 export const Input = styled.input`
   padding: 5px;
   font-size: 20px;
+
 `;
 export const Textarea = styled.textarea`
   padding: 5px;
   resize: vertical;
   grid-column-start: 1;
   grid-column-end: 3;
-`;
-
-export const IngridientField = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 2;
-  ${({ measure }) =>
-    measure &&
-    css`
-      grid-column-start: 2;
-      grid-column-end: 3;
-    `}
 `;
