@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Section from "../../common/Section";
 import { Form, Label, Input, Textarea } from "./styled";
-import Ingredients from "./ingridnientsField";
+import Ingredients from "./ingrednientsField";
 const MyRecipes = () => {
   const [category, setCategory] = useState("");
   const [area, setArea] = useState("");
