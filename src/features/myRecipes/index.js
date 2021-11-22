@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Section from "../../common/Section";
 import { Form, Label, Input, Textarea } from "./styled";
-import Field from "./ingridnientsField";
+import Ingredients from "./ingridnientsField";
 const MyRecipes = () => {
   const [category, setCategory] = useState("");
   const [area, setArea] = useState("");
@@ -41,7 +41,7 @@ const MyRecipes = () => {
             onChange={(event) => setName(event.target.value)}
           />
         </Label>
-        <Field />
+        <Ingredients />
         <Label>
           Description
           <Textarea rows="20" />
