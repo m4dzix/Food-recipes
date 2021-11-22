@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Section from "../../common/Section";
-import { Form, Label, Input, Textarea } from "./styled";
+import { Form, Label, Input, Textarea, Button } from "./styled";
 import Ingredients from "./ingrednientsField";
 const MyRecipes = () => {
   const [category, setCategory] = useState("");
@@ -13,7 +13,6 @@ const MyRecipes = () => {
   return (
     <Section form={true}>
       <Form onSubmit={onFormSubmit}>
-        {" "}
         <Label>
           Category
           <Input
@@ -44,8 +43,9 @@ const MyRecipes = () => {
         <Ingredients />
         <Label>
           Description
-          <Textarea rows="20" />
+          <Textarea rows="10" />
         </Label>
+        <Button> Add new recipe !</Button>
       </Form>
     </Section>
   );

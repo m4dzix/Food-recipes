@@ -7,7 +7,7 @@ import {
   changeMeasureInputValue,
   selectMeasures,
 } from "./myRecipesSlice";
-import { Label, Input } from "./styled";
+import { Label, Input, Button } from "./styled";
 const Ingredients = () => {
 
   const ingredientsList = useSelector(selectIngredients);
@@ -47,13 +47,14 @@ const Ingredients = () => {
             />
           ))}
         </Label>
-      <button
+      <Button
+      type={"button"}
         onClick={() => {
           onButtonClick();
         }}
       >
         Add Ingredient
-      </button>
+      </Button>
     </>
   );
 };
