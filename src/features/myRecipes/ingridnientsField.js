@@ -1,59 +1,67 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addIngridient, selectIngridients } from "./myRecipesSlice";
-import { Label, Input, IngridientField } from "./styled";
-import { nanoid } from "@reduxjs/toolkit";
+import {
+  addIngredient,
+  changeIngredientInputValue,
+  selectIngredients,
+  changeMeasureInputValue,
+  selectMeasures,
+} from "./myRecipesSlice";
+import { Label, Input, IngredientField } from "./styled";
+const Ingredients = () => {
 
-const Field = () => {
-  const [ingridient, setIngridient] = useState("");
-  const [measure, setMeasure] = useState("");
-  const ingridientsList = useSelector(selectIngridients);
+  const ingredientsList = useSelector(selectIngredients);
+  const measuresList = useSelector(selectMeasures);
   const dispatch = useDispatch();
 
-  const onButtonClick = () =>
-    dispatch(
-      addIngridient({
-        id: nanoid(),
-      })
-    );
+  const onButtonClick = () =>(
+      dispatch (addIngredient({
+        ingredientValue: "",
+        id: ingredientsList.length,
+      }),))
+  
 
   return (
     <>
-      <IngridientField>
-        Ingridients
+      <IngredientField>
+        Ingredients
         <Label>
-          {ingridientsList.map(({ id }) => (
+          {ingredientsList.map(({ id }) => (
             <Input
               key={id}
-              name="ingridient"
-              value={ingridient}
-              onChange={(event) => setIngridient(event.target.value)}
+              name="ingredient"
+              type="text"
+              onChange={(event) =>
+                dispatch(changeIngredientInputValue(event.target.value))
+              }
             />
           ))}
         </Label>
-      </IngridientField>
-      <IngridientField measure={true}>
+      </IngredientField>
+      <IngredientField measure={true}>
         Measures
         <Label>
-          {ingridientsList.map(({ id }) => (
+          {measuresList.map(({  id }) => (
             <Input
               key={id}
               name="measure"
-              value={measure}
-              onChange={(event) => setMeasure(event.target.value)}
+              type="text"
+              onChange={(event) =>
+                dispatch(changeMeasureInputValue(event.target.value))
+              }
             />
           ))}
         </Label>
-      </IngridientField>
+      </IngredientField>
       <button
         onClick={() => {
           onButtonClick();
         }}
       >
-        Add ingridient
+        Add Ingredient
       </button>
     </>
   );
 };
 
-export default Field;
+export default Ingredients
