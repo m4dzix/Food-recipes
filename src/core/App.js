@@ -3,7 +3,7 @@ import {
   toRecipeListByArea,
   toRecipeListByCategory,
   toRecipe,
-  toMyRecipes,
+  toAddRecipe,
 } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
@@ -28,7 +28,7 @@ function App() {
         <Route path={toRecipe(":id")}>
           <MealRecipe />
         </Route>
-        <Route path={toMyRecipes()}>
+        <Route path={toAddRecipe()}>
           <MyRecipes />
         </Route>
       </Switch>
