@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular";
+import { PostAdd } from "@styled-icons/material-outlined";
 import { NavLink } from "react-router-dom";
 
 const activeClassName = "active";
@@ -40,7 +41,7 @@ export const MenuList = styled.section`
       `}
   }
 `;
-export const BurgerMenuIcon = styled(Menu)`
+const Icon = css`
   position: absolute;
   z-index: 2;
   right: 20px;
@@ -52,6 +53,13 @@ export const BurgerMenuIcon = styled(Menu)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}px) {
     height: 30px;
   }
+`;
+export const BurgerMenuIcon = styled(Menu)`
+  ${Icon}
+`;
+export const AddRecipeIcon = styled(PostAdd)`
+  ${Icon}
+  right: 90px;
 `;
 export const List = styled.ul`
   display: grid;
