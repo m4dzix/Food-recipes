@@ -3,24 +3,39 @@ import { createSlice } from "@reduxjs/toolkit";
 const myRecipeSlice = createSlice({
   name: "myRecipe",
   initialState: {
-    ingredients: [{ ingredientValue: "", id: 1 }],
-    measures: [{ measureValue: "", id: 1 }],
+    recipes: [],
+    ingredients: [{ ingredientValue: "", id: 0 }],
+    measures: [{ measureValue: "", id: 0 }],
   },
   reducers: {
-    addIngredient: ( state , { payload }) => {
+    addRecipe: (state, { payload }) => {
+      state.recipes.push(payload);
+    },
+    addIngredient: (state, { payload }) => {
       state.ingredients.push(payload);
+    },
+    addMeasure: (state, { payload }) => {
       state.measures.push(payload);
     },
-    changeIngredientInputValue: (ingredients, {payload}) =>{ ingredients.ingredientValue =  payload},
-    changeMeasureInputValue: (measures, { payload }) =>{  measures.measureValue = payload}
+    changeIngredientInputValue: ({ ingredients }, { payload }) => {
+      ingredients[payload[1]].ingredientValue = payload[0];
+    },
+    changeMeasureInputValue: ({ measures }, { payload }) => {
+      measures[payload[1]].measureValue = payload[0];
+    },
   },
 });
 
-export const { addIngredient, changeIngredientInputValue, addMeasure, changeMeasureInputValue } = myRecipeSlice.actions;
+export const {
+  addRecipe,
+  addIngredient,
+  changeIngredientInputValue,
+  addMeasure,
+  changeMeasureInputValue,
+} = myRecipeSlice.actions;
 export const selectState = (state) => state.myRecipe;
-export const selectIngredients = (state) =>
-selectState(state).ingredients;
-export const selectMeasures = (state) =>
-selectState(state).measures;
+export const selectMyRecipes = (state) => selectState(state).recipes;
+export const selectIngredients = (state) => selectState(state).ingredients;
+export const selectMeasures = (state) => selectState(state).measures;
 
 export default myRecipeSlice.reducer;
