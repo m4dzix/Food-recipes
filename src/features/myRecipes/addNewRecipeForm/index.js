@@ -33,7 +33,7 @@ const MyRecipes = () => {
     );
   };
   return (
-    <Section form={"true"}>
+    <Section myRecipe={"true"}>
       <Form onSubmit={onFormSubmit}>
         <Label>
           Category

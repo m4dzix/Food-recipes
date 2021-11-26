@@ -29,8 +29,8 @@ export const StyledSection = styled.section`
         padding: 10px;
       }
     `}
-  ${({ form }) =>
-    form &&
+  ${({ myRecipe }) =>
+    myRecipe &&
     css`
       height: 100vh;
     `}
