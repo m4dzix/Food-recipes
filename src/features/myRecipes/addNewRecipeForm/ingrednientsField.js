@@ -7,7 +7,7 @@ import {
   selectIngredients,
   changeMeasureInputValue,
   selectMeasures,
-} from "./myRecipesSlice";
+} from "../myRecipesSlice";
 import { Label, Input, Button } from "./styled";
 const Ingredients = () => {
   const ingredientsList = useSelector(selectIngredients);
