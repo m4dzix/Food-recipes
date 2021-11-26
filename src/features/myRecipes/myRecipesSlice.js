@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getFromLocalStorage } from "./saveInLocalStorage";
 
 const myRecipeSlice = createSlice({
   name: "myRecipe",
   initialState: {
-    recipes: [],
+    recipes: getFromLocalStorage(),
     ingredients: [{ ingredientValue: "", id: 0 }],
     measures: [{ measureValue: "", id: 0 }],
   },

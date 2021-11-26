@@ -3,7 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import Section from "../../common/Section";
 import { Form, Label, Input, Textarea, Button } from "./styled";
 import Ingredients from "./ingrednientsField";
-import { selectIngredients, selectMeasures, addRecipe } from "./myRecipesSlice";
+import {
+  selectIngredients,
+  selectMeasures,
+  addRecipe,
+  selectMyRecipes,
+} from "./myRecipesSlice";
 
 const MyRecipes = () => {
   const [category, setCategory] = useState("");
@@ -13,6 +18,7 @@ const MyRecipes = () => {
   const dispatch = useDispatch();
   const ingredients = useSelector(selectIngredients);
   const measures = useSelector(selectMeasures);
+  const myRecipesList = useSelector(selectMyRecipes);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -27,6 +33,8 @@ const MyRecipes = () => {
         description,
       })
     );
+
+    console.log(myRecipesList);
   };
   return (
     <Section form={"true"}>
