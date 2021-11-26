@@ -4,6 +4,7 @@ import {
   toRecipeListByCategory,
   toRecipe,
   toAddRecipe,
+  toMyRecipeList,
 } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
@@ -11,7 +12,8 @@ import RecipeListByArea from "../features/recipeListByArea/index";
 import RecipeListByCategory from "../features/recipeListByCategory/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import MealRecipe from "../features/mealRecipe/index";
-import MyRecipes from "../features/myRecipes";
+import MyRecipes from "../features/myRecipes/addNewRecipeForm";
+import MyRecipeList from "../features/myRecipes/myRecipesList";
 
 function App() {
   return (
@@ -30,6 +32,9 @@ function App() {
         </Route>
         <Route path={toAddRecipe()}>
           <MyRecipes />
+        </Route>
+        <Route path={toMyRecipeList()}>
+          <MyRecipeList />
         </Route>
       </Switch>
     </HashRouter>

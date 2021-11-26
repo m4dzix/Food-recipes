@@ -16,7 +16,7 @@ import {
   StyledNavLink,
   AddRecipeIcon,
 } from "./styled";
-import { toRecipeListByArea, toAddRecipe } from "../../routes";
+import { toRecipeListByArea, toAddRecipe, toMyRecipeList } from "../../routes";
 import Error from "../Error";
 
 const Navigation = () => {
@@ -42,6 +42,9 @@ const Navigation = () => {
       <MenuList hideMenuList={isHideMenuList}>
         {areasState === "success" ? (
           <List>
+            <StyledNavLink to={toMyRecipeList()}>
+              <Item>My recipes</Item>
+            </StyledNavLink>
             {areas.map((area) => (
               <StyledNavLink
                 activeClassName="active"
