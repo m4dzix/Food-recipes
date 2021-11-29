@@ -9,7 +9,7 @@ export const Form = styled.form`
   grid-template-columns: repeat(2, 1fr);
 `;
 export const Label = styled.label`
-  color: teal;
+  color: ${({ theme }) => theme.colors.teal};
   font-weight: bold;
   text-shadow: 0.3px 0.3px #222;
   font-size: 25px;
@@ -52,8 +52,8 @@ export const Button = styled.button`
   border: 3px solid #111;
   padding: 5px 15px;
   justify-self: end;
-  color: white;
-  background-color: teal;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.teal};
   grid-column-start: 2;
   font-size: 20px;
   margin-right: 15px;

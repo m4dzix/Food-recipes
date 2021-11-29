@@ -2,10 +2,10 @@ import styled, { css } from "styled-components";
 
 export const Title = styled.h1`
   font-size: 50px;
-  text-shadow: 2px 2px 3px black;
-  color: teal;
+  text-shadow: 2px 2px 3px ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.teal};
   font-weight: bold;
-  background-color: whitesmoke;
+  background-color: ${({ theme }) => theme.colors.whitesmoke};
   margin-bottom: 0;
   padding: 50px 30px 25px;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
@@ -18,7 +18,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: ${({ theme }) => theme.colors.whitesmoke};
   background-position: fixed;
   list-style: none;
   padding: 50px 30px;
@@ -43,7 +43,10 @@ export const MainInformation = styled.p`
   width: fit-content;
   transition: 0.5s ease;
   padding-bottom: 2px;
-  background-image: linear-gradient(teal, teal);
+  background-image: linear-gradient(
+    ${({ theme }) => theme.colors.teal},
+    ${({ theme }) => theme.colors.teal}
+  );
   background-position: left bottom;
   background-size: 0% 3px;
   background-repeat: no-repeat;
@@ -58,8 +61,8 @@ export const MainInformation = styled.p`
     `}
 `;
 export const Item = styled.li`
-  border: 2px solid black;
-  box-shadow: 0px 0px 5px teal;
+  border: 2px solid ${({ theme }) => theme.colors.black};
+  box-shadow: 0px 0px 5px ${({ theme }) => theme.colors.teal};
   display: grid;
   grid-template-rows: 1fr 1fr;
   transition: 0.5s;
@@ -67,7 +70,7 @@ export const Item = styled.li`
   margin-bottom: 20px;
   width: 100%;
   &:hover {
-    border: 4px solid teal;
+    border: 4px solid ${({ theme }) => theme.colors.teal};
     transform: scale(1.005);
   }
   &:hover ${MainInformation} {
@@ -86,7 +89,7 @@ export const Options = styled.div`
 `;
 export const Button = styled.button`
   border: none;
-  background-color: transparent;
+  background-color: unset;
   font-size: 20px;
   padding: 0px 10px;
   transition: 0.5s;
@@ -105,12 +108,12 @@ export const Button = styled.button`
     noRecipe &&
     css`
       align-self: unset;
-      border: 1px solid black;
+      border: 1px solid ${({ theme }) => theme.colors.black};
       border-radius: 5px;
-      background-color: teal;
+      background-color: ${({ theme }) => theme.colors.teal};
       padding: 5px 10px;
       &:hover {
-        color: white;
+        color: ${({ theme }) => theme.colors.white};
       }
     `}
 `;
