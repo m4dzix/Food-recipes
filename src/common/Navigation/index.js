@@ -7,8 +7,16 @@ import {
   selectAreas,
   selectAreasStatus,
 } from "./areasSlice";
-import { MenuList, BurgerMenuIcon, List, Item, StyledNavLink } from "./styled";
-import { toRecipeListByArea } from "../../routes";
+import { Link } from "react-router-dom";
+import {
+  MenuList,
+  BurgerMenuIcon,
+  List,
+  Item,
+  StyledNavLink,
+  AddRecipeIcon,
+} from "./styled";
+import { toRecipeListByArea, toAddRecipe, toMyRecipeList } from "../../routes";
 import Error from "../Error";
 
 const Navigation = () => {
@@ -28,9 +36,15 @@ const Navigation = () => {
           dispatch(toggleHideMenuList());
         }}
       ></BurgerMenuIcon>
+      <Link to={toAddRecipe()}>
+        <AddRecipeIcon addRecipe={true}></AddRecipeIcon>
+      </Link>
       <MenuList hideMenuList={isHideMenuList}>
         {areasState === "success" ? (
           <List>
+            <StyledNavLink to={toMyRecipeList()}>
+              <Item>My recipes</Item>
+            </StyledNavLink>
             {areas.map((area) => (
               <StyledNavLink
                 activeClassName="active"

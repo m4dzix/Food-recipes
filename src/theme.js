@@ -6,6 +6,7 @@ export const theme = {
     raisinBlack: "#222",
     chineseBlack: "#111",
     black: "#000",
+    teal: "#008080",
   },
   breakpoints: {
     tablet: 1025,

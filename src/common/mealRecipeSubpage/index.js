@@ -44,7 +44,7 @@ const MealRecipeSubpage = () => {
         ></Tile>
       </Section>
     );
-  } else if (mealRecipeStatus === "success") {
+  } else if (mealRecipeStatus !== "success") {
     return <Error />;
   } else {
     return <Loader />;

@@ -29,4 +29,9 @@ export const StyledSection = styled.section`
         padding: 10px;
       }
     `}
+  ${({ myRecipe }) =>
+    myRecipe &&
+    css`
+      height: 100vh;
+    `}
 `;
