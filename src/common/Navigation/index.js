@@ -43,7 +43,13 @@ const Navigation = () => {
         {areasState === "success" ? (
           <List>
             <StyledNavLink to={toMyRecipeList()}>
-              <Item>My recipes</Item>
+              <Item
+                onClick={() => {
+                  dispatch(toggleHideMenuList());
+                }}
+              >
+                My recipes
+              </Item>
             </StyledNavLink>
             {areas.map((area) => (
               <StyledNavLink
