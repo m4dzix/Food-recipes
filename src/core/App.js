@@ -5,6 +5,7 @@ import {
   toRecipe,
   toAddRecipe,
   toMyRecipeList,
+  toMyRecipe,
 } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
@@ -14,6 +15,7 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import MealRecipe from "../features/mealRecipe/index";
 import MyRecipes from "../features/myRecipes/addNewRecipeForm";
 import MyRecipeList from "../features/myRecipes/myRecipesList";
+import MyMealRecipeSubpage from "../common/myMealRecipeSubpage";
 
 function App() {
   return (
@@ -33,8 +35,11 @@ function App() {
         <Route path={toAddRecipe()}>
           <MyRecipes />
         </Route>
-        <Route path={toMyRecipeList()}>
+        <Route path={toMyRecipeList(":id")}>
           <MyRecipeList />
+        </Route>
+        <Route path={toMyRecipe()}>
+          <MyMealRecipeSubpage />
         </Route>
       </Switch>
     </HashRouter>

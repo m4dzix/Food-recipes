@@ -11,31 +11,35 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { selectMyRecipes, removeRecipe } from "../myRecipesSlice";
 import { Link } from "react-router-dom";
-import { toAddRecipe } from "../../../routes";
+import { toAddRecipe, toMyRecipe } from "../../../routes";
 
 const MyRecipeList = () => {
   const recipeList = useSelector(selectMyRecipes);
   const dispatch = useDispatch();
+
   return (
     <Section myRecipe={"true"}>
       {recipeList.length !== 0 ? (
         <>
           <Title>My recipe list</Title>
           <Container list={"true"} as="ul">
-            {recipeList.map(({ name }) => (
-              <Item key={name}>
-                <MainInformation>{name}</MainInformation>
+            {recipeList.map((recipe) => (
+              <Item key={recipe.name}>
+                <MainInformation>{recipe.name}</MainInformation>
                 <Options>
-                  <Button>
-                    Go to recipe
-                    <span as="img" alt="aria-label">
-                      {" "}
-                      ➡️{" "}
-                    </span>
-                  </Button>
+                  <Link to={toMyRecipe({ id: recipe.id })}>
+                    {" "}
+                    <Button>
+                      Go to recipe
+                      <span as="img" alt="aria-label">
+                        {" "}
+                        ➡️{" "}
+                      </span>
+                    </Button>
+                  </Link>
                   <Button
                     onClick={() => {
-                      dispatch(removeRecipe(name));
+                      dispatch(removeRecipe(recipe.name));
                     }}
                   >
                     Delete

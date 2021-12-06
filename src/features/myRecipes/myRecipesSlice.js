@@ -51,5 +51,7 @@ export const selectState = (state) => state.myRecipe;
 export const selectMyRecipes = (state) => selectState(state).recipes;
 export const selectIngredients = (state) => selectState(state).ingredients;
 export const selectMeasures = (state) => selectState(state).measures;
+export const getRecipeById = (state, recipeId) =>
+  selectMyRecipes(state).find(({ id }) => id === recipeId);
 
 export default myRecipeSlice.reducer;
