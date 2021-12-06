@@ -24,6 +24,12 @@ const myRecipeSlice = createSlice({
     changeMeasureInputValue: ({ measures }, { payload }) => {
       measures[payload[1]].measureValue = payload[0];
     },
+    clearIngredients: (state) => {
+      state.ingredients = [{ ingredientValue: "", id: 0 }];
+    },
+    clearMeasures: (state) => {
+      state.measures = [{ measureValue: "", id: 0 }];
+    },
     removeRecipe: ({ recipes }, { payload }) => {
       const index = recipes.findIndex((recipe) => recipe.name === payload);
       recipes.splice(index, 1);
@@ -37,6 +43,8 @@ export const {
   changeIngredientInputValue,
   addMeasure,
   changeMeasureInputValue,
+  clearIngredients,
+  clearMeasures,
   removeRecipe,
 } = myRecipeSlice.actions;
 export const selectState = (state) => state.myRecipe;
