@@ -12,6 +12,7 @@ export const theme = {
     tablet: 1025,
     mobileLandscape: 830,
     mobile: 767,
+    middleMobile: 600,
     smallMobile: 430,
   },
 };

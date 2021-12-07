@@ -1,5 +1,14 @@
 import React from "react";
-import { Tile, Title, List, Key, Value, Recipe } from "./styled";
+import {
+  Tile,
+  Title,
+  Subtitle,
+  Ingredients,
+  List,
+  Key,
+  Value,
+  Recipe,
+} from "./styled";
 import Section from "../Section";
 import { useSelector } from "react-redux";
 import { getRecipeById } from "../../features/myRecipes/myRecipesSlice";
@@ -16,7 +25,7 @@ const MyMealRecipeSubpage = () => {
   );
 
   return (
-    <Section list={false}>
+    <Section myRecipe={"true"}>
       <Tile>
         <Title>{myRecipe.name}</Title>
         <List details>
@@ -25,15 +34,22 @@ const MyMealRecipeSubpage = () => {
           <Key>Area:</Key>
           <Value>{myRecipe.area}</Value>
         </List>
-        <List>
-          {IngredientsAndMeasuresArray.map(([key, value]) => (
-            <React.Fragment key={key}>
-              <Key>{key}</Key>
-              <Value>{value}</Value>
-            </React.Fragment>
-          ))}
-        </List>
-        <Recipe>{myRecipe.description}</Recipe>
+        <Ingredients>
+          <Subtitle list={"true"}>Ingredients</Subtitle>
+          <List>
+            {IngredientsAndMeasuresArray.map(([key, value]) => (
+              <React.Fragment key={key}>
+                <Key>{key}</Key>
+                <Value>{value}</Value>
+              </React.Fragment>
+            ))}
+          </List>
+        </Ingredients>
+        <Recipe>
+          {" "}
+          <Subtitle>Recipe</Subtitle>
+          {myRecipe.description}
+        </Recipe>
       </Tile>
     </Section>
   );
