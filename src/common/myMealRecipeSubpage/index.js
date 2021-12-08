@@ -27,12 +27,12 @@ const MyMealRecipeSubpage = () => {
   return (
     <Section myRecipe={"true"}>
       <Tile>
-        <Title>{myRecipe.name}</Title>
+        <Title>{myRecipe.strName}</Title>
         <List details>
           <Key>Category:</Key>
-          <Value>{myRecipe.category}</Value>
+          <Value>{myRecipe.strCategory}</Value>
           <Key>Area:</Key>
-          <Value>{myRecipe.area}</Value>
+          <Value>{myRecipe.strArea}</Value>
         </List>
         <Ingredients>
           <Subtitle list={"true"}>Ingredients</Subtitle>
@@ -48,7 +48,7 @@ const MyMealRecipeSubpage = () => {
         <Recipe>
           {" "}
           <Subtitle>Recipe</Subtitle>
-          {myRecipe.description}
+          {myRecipe.strInstructions}
         </Recipe>
       </Tile>
     </Section>

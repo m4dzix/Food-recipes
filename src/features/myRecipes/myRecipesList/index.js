@@ -24,8 +24,8 @@ const MyRecipeList = () => {
           <Title>My recipe list</Title>
           <Container list={"true"} as="ul">
             {recipeList.map((recipe) => (
-              <Item key={recipe.name}>
-                <MainInformation>{recipe.name}</MainInformation>
+              <Item key={recipe.strMeal}>
+                <MainInformation>{recipe.strMeal}</MainInformation>
                 <Options>
                   <Link to={toMyRecipe({ id: recipe.id })}>
                     {" "}
@@ -39,7 +39,7 @@ const MyRecipeList = () => {
                   </Link>
                   <Button
                     onClick={() => {
-                      dispatch(removeRecipe(recipe.name));
+                      dispatch(removeRecipe(recipe.strMeal));
                     }}
                   >
                     Delete

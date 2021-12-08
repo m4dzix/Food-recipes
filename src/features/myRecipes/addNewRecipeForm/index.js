@@ -13,10 +13,10 @@ import {
 import { nanoid } from "@reduxjs/toolkit";
 
 const MyRecipes = () => {
-  const [category, setCategory] = useState("");
-  const [area, setArea] = useState("");
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [strCategory, setStrCategory] = useState("");
+  const [strArea, setStrArea] = useState("");
+  const [strMeal, setStrMeal] = useState("");
+  const [strInstructions, setStrInstructions] = useState("");
   const dispatch = useDispatch();
   const ingredients = useSelector(selectIngredients);
   const measures = useSelector(selectMeasures);
@@ -27,9 +27,11 @@ const MyRecipes = () => {
     dispatch(
       addRecipe({
         id: nanoid(),
-        category: `${category.charAt(0).toUpperCase()}${category.substring(1)}`,
-        area: `${area.charAt(0).toUpperCase()}${area.substring(1)}`,
-        name: `${name.charAt(0).toUpperCase()}${name.substring(1)}`,
+        strCategory: `${strCategory
+          .charAt(0)
+          .toUpperCase()}${strCategory.substring(1)}`,
+        strArea: `${strArea.charAt(0).toUpperCase()}${strArea.substring(1)}`,
+        strMeal: `${strMeal.charAt(0).toUpperCase()}${strMeal.substring(1)}`,
         ingredients: ingredients.map(
           (ingridient) =>
             `${ingridient.ingredientValue
@@ -42,17 +44,17 @@ const MyRecipes = () => {
               .charAt(0)
               .toUpperCase()}${measure.measureValue.substring(1)}`
         ),
-        description: `${description
+        strInstructions: `${strInstructions
           .charAt(0)
-          .toUpperCase()}${description.substring(1)}`,
+          .toUpperCase()}${strInstructions.substring(1)}`,
       })
     );
-    setCategory(""),
-      setArea(""),
-      setName(""),
+    setStrCategory(""),
+      setStrArea(""),
+      setStrMeal(""),
       dispatch(clearIngredients()),
       dispatch(clearMeasures()),
-      setDescription("");
+      setStrInstructions("");
   };
   return (
     <Section myRecipe={"true"}>
@@ -62,8 +64,8 @@ const MyRecipes = () => {
           <Input
             type="text"
             name="category"
-            value={category}
-            onChange={(event) => setCategory(event.target.value)}
+            value={strCategory}
+            onChange={(event) => setStrCategory(event.target.value)}
           />
         </Label>
         <Label>
@@ -71,8 +73,8 @@ const MyRecipes = () => {
           <Input
             type="text"
             name="area"
-            value={area}
-            onChange={(event) => setArea(event.target.value)}
+            value={strArea}
+            onChange={(event) => setStrArea(event.target.value)}
           />
         </Label>
         <Label>
@@ -80,8 +82,8 @@ const MyRecipes = () => {
           <Input
             type="text"
             name="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            value={strMeal}
+            onChange={(event) => setStrMeal(event.target.value)}
           />
         </Label>
         <Ingredients />
@@ -89,8 +91,8 @@ const MyRecipes = () => {
           Description
           <Textarea
             rows="10"
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
+            value={strInstructions}
+            onChange={(event) => setStrInstructions(event.target.value)}
           />
         </Label>
         <Button> Add new recipe !</Button>
