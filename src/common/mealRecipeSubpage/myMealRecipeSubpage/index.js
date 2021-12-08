@@ -2,8 +2,8 @@ import React from "react";
 import Section from "../../Section";
 import Tile from "../Tile";
 import { useSelector } from "react-redux";
-import { getRecipeById } from "../../../features/myRecipes/myRecipesSlice";
-import { useCreateIngredientsAndMeasuresArray } from "../useCreateIngredientsAndMeasuresArray";
+import { getRecipeById } from "../../../features/myRecipes/myRecipeList/myRecipeListSlice";
+import { useCreateIngredientsAndMeasuresArray } from "../customHooks/useCreateIngredientsAndMeasuresArray";
 import { useParams } from "react-router-dom";
 
 const MyMealRecipeSubpage = () => {

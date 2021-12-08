@@ -19,7 +19,7 @@ const MealRecipeSubpage = ({ userRecipe, mealRecipe, array }) => (
     {userRecipe ? null : <Image url={mealRecipe.strMealThumb} />}
     <List details>
       <Key>Category:</Key>
-      {!userRecipe ? (
+      {userRecipe ? (
         <Value>{mealRecipe.strCategory}</Value>
       ) : (
         <Value as={Link} to={toRecipeListByCategory(mealRecipe.strCategory)}>

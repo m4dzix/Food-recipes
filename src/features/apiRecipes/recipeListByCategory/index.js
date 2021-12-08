@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import RecipeListSubpage from "../../common/RecipeListSubpage/index";
+import RecipeListSubpage from "../../../common/RecipeListSubpage/index";
 
 import {
   fetchRecipeListByCategory,

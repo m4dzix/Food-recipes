@@ -9,7 +9,7 @@ import {
   Button,
 } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
-import { selectMyRecipes, removeRecipe } from "../myRecipesSlice";
+import { selectMyRecipes, removeRecipe } from "./myRecipeListSlice";
 import { Link } from "react-router-dom";
 import { toAddRecipe, toMyRecipe } from "../../../routes";
 

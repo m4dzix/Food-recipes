@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Section from "../../../common/Section";
+import Section from "../../../../common/Section";
 import { Form, Label, Input, Textarea, Button } from "./styled";
 import Ingredients from "./ingrednientsField";
 import {
@@ -9,7 +9,7 @@ import {
   addRecipe,
   clearIngredients,
   clearMeasures,
-} from "../myRecipesSlice";
+} from "../myRecipeListSlice";
 import { nanoid } from "@reduxjs/toolkit";
 
 const MyRecipes = () => {

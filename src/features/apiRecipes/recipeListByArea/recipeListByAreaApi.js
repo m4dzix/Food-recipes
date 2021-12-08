@@ -1,4 +1,4 @@
-import { fetchFromApi } from "../../fetchFromApi";
+import { fetchFromApi } from "../../../fetchFromApi";
 
 export const getRecipeListByArea = (area) =>
   fetchFromApi({

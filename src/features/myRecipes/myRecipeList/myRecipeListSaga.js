@@ -1,5 +1,5 @@
 import { call, select, takeEvery } from "redux-saga/effects";
-import { selectMyRecipes } from "./myRecipesSlice";
+import { selectMyRecipes } from "./myRecipeListSlice";
 import { saveInLocalStorage } from "./saveInLocalStorage";
 
 function* localStorageHandler() {

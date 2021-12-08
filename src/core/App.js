@@ -9,13 +9,13 @@ import {
 } from "../routes";
 import TopBar from "./TopBar/index.js";
 import Background from "../common/Background/index";
-import RecipeListByArea from "../features/recipeListByArea/index";
-import RecipeListByCategory from "../features/recipeListByCategory/index";
+import RecipeListByArea from "../features/apiRecipes/recipeListByArea/index";
+import RecipeListByCategory from "../features/apiRecipes/recipeListByCategory/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import MealRecipe from "../features/mealRecipe/index";
-import MyRecipes from "../features/myRecipes/addNewRecipeForm";
-import MyRecipeList from "../features/myRecipes/myRecipesList";
-import MyMealRecipeSubpage from "../common/myMealRecipeSubpage";
+import MealRecipe from "../features/apiRecipes/mealRecipe/index";
+import MyRecipes from "../features/myRecipes/myRecipeList/addNewRecipeForm";
+import MyRecipeList from "../features/myRecipes/myRecipeList";
+import MyMealRecipe from "../features/myRecipes/index";
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
           <MyRecipeList />
         </Route>
         <Route path={toMyRecipe()}>
-          <MyMealRecipeSubpage />
+          <MyMealRecipe />
         </Route>
       </Switch>
     </HashRouter>
