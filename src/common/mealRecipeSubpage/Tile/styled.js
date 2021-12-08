@@ -14,6 +14,16 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   padding: 40px;
   background-color: ${({ theme }) => theme.colors.whitesmoke};
+  ${({ myRecipe }) =>
+    myRecipe &&
+    css`
+      grid-template-areas:
+        "title title"
+        "ingridiens details"
+        "recipe recipe";
+      grid-template-rows: auto;
+      grid-template-columns: auto;
+    `}
   @media (max-width: 430px) {
     grid-template-areas:
       "title "
@@ -36,18 +46,25 @@ export const Wrapper = styled.div`
     grid-template-rows: auto minmax(auto, 220px) auto auto auto;
     grid-template-columns: none;
     padding: 10px;
+    ${({ MyRecipe }) =>
+      MyRecipe &&
+      css`
+        grid-template-rows: auto minmax(auto, 80px) auto auto auto;
+      `}
   }
 `;
 export const Title = styled.h2`
   grid-area: title;
   justify-self: center;
   font-size: 50px;
+  color: teal;
+  text-shadow: 0px 0px 1px black;
   @media (max-width: ${({ theme }) =>
       theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
     font-size: 30px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallMobile}px) {
-    font-size: 30px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.middleMobile}px) {
+    font-size: 35px;
   }
 `;
 export const Image = styled.div`
@@ -59,15 +76,19 @@ export const Image = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 `;
+export const Ingredients = styled.div`
+  grid-area: ingridiens;
+  padding: 10px;
+`;
 export const List = styled.dl`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(auto-fill, minmax(auto, 30px));
   grid-gap: 7px;
   font-size: 20px;
-  grid-area: ingridiens;
   list-style: none;
   text-transform: capitalize;
+  padding: 10px;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLandscape}px) {
     font-size: 15px;
     grid-template-rows: repeat(auto-fill, 20px);
@@ -89,6 +110,16 @@ export const List = styled.dl`
         grid-template-rows: repeat(auto-fill, 20px);
       }
     `};
+`;
+export const Subtitle = styled.h3`
+  margin: 25px 0px;
+  color: ${({ theme }) => theme.colors.teal};
+  font-size: 25px;
+  text-shadow: 0px 0px 0.5px ${({ theme }) => theme.colors.black};
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileLandscape}px) and (orientation: landscape) {
+    font-size: 15px;
+  }
 `;
 export const Key = styled.dt`
   display: inline;
