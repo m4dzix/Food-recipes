@@ -49,12 +49,14 @@ const MyRecipes = () => {
           .toUpperCase()}${strInstructions.substring(1)}`,
       })
     );
-    setStrCategory(""),
+    return (
+      setStrCategory(""),
       setStrArea(""),
       setStrMeal(""),
       dispatch(clearIngredients()),
       dispatch(clearMeasures()),
-      setStrInstructions("");
+      setStrInstructions("")
+    );
   };
   return (
     <Section myRecipe={"true"}>
