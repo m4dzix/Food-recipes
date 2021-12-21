@@ -19,6 +19,4 @@ const RecipeListByArea = () => {
   );
 };
 
-<RecipeListSubpage />;
-
 export default RecipeListByArea;
