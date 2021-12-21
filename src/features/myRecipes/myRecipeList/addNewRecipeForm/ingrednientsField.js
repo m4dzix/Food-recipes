@@ -15,20 +15,20 @@ const Ingredients = () => {
   const measuresList = useSelector(selectMeasures);
   const dispatch = useDispatch();
 
-  const onButtonClick = () => {
+  const onButtonClick = () => [
     dispatch(
       addIngredient({
         ingredientValue: "",
         id: ingredientsList.length,
       })
     ),
-      dispatch(
-        addMeasure({
-          measureValue: "",
-          id: ingredientsList.length,
-        })
-      );
-  };
+    dispatch(
+      addMeasure({
+        measureValue: "",
+        id: ingredientsList.length,
+      })
+    ),
+  ];
   return (
     <>
       <Label ingredient={true}>
