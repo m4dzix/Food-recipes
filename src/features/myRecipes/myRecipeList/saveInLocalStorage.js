@@ -4,4 +4,4 @@ export const saveInLocalStorage = (recipe) =>
   localStorage.setItem(localStorageKey, JSON.stringify(recipe));
 
 export const getFromLocalStorage = () =>
-  JSON.parse(localStorage.getItem(localStorageKey) || []);
+  JSON.parse(localStorage.getItem(localStorageKey)) || [];
