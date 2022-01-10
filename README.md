@@ -6,13 +6,28 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Website to search for recipes from many parts of the world.
 
-- click the menu button
-- select the region
-- select the recipe you are interested in
-- click a category value to view all meals in that category
-- click on the logo to go back to the home page
+### Searching recipes
+
+- Click the menu button
+- Select the region
+- Select the recipe you are interested in
+- Click a category value to view all meals in that category
+- Click on the logo to go back to the home page
 
 ![How this works Gif](src/assets/actionsGif.gif)
+
+### Adding new recipes
+
+- Click on icon „add new recipe”
+- Fill the form
+- To add new ingredient click on button „ add ingredient”
+- To add recipe press ENTER or click on button „ add recipe”
+- To see user recipes click on burger menu and choose my recipes
+
+### Go to the recipe or remove recipe
+
+- Click „go to the recipe” to see whole recipe
+- Click "remove recipe" to remove this recipe
 
 ## Technologies used:
 
